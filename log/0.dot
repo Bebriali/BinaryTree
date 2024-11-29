@@ -1,0 +1,14 @@
+digraph TREE
+{	rankdir = TB
+	node[color = "black", fontsize = 10];
+	edge[color = "#0AF2C8", fontcolor = "white", fontsize = 5];
+	x00E6BBF0 [shape = record, label = "{ ptr:x00E6BBF0 | data:+ | { <left0>x00E6BB30 | <right0>x00E6BC08 }}"];
+	x00E6BB30 [shape = record, label = "{ ptr:x00E6BB30 | data:sin | { <left0>x00E6BB90 | <right0>x00000000 }}"];
+	x00E6BB90 [shape = record, label = "{ ptr:x00E6BB90 | data:9 | { <left0>x00000000 | <right0>x00000000 }}"];
+	x00E6BC08 [shape = record, label = "{ ptr:x00E6BC08 | data:cos | { <left0>x00E6BC80 | <right0>x00000000 }}"];
+	x00E6BC80 [shape = record, label = "{ ptr:x00E6BC80 | data:8 | { <left0>x00000000 | <right0>x00000000 }}"];
+	x00E6BBF0:<left0> -> x00E6BB30;
+	x00E6BBF0:<right0> -> x00E6BC08;
+	x00E6BB30:<left0> -> x00E6BB90;
+	x00E6BC08:<left0> -> x00E6BC80;
+	}

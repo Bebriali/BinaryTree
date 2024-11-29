@@ -1,0 +1,3888 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCA1 в функции FormObjects(). Попытка прочесть данные по адресу 0x6E702E80 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x1A60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCA1 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DC59 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 4 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:49:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:50:20
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCA1 в функции FormObjects(). Попытка прочесть данные по адресу 0x6E702E80 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x1A60 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCA1 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DC59 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 4 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:49:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:50:20
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCA1 в функции FormObjects(). Попытка прочесть данные по адресу 0x00000080 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x3D44 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCA1 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DC59 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 4 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:51:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:51:33
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCA1 в функции FormObjects(). Попытка прочесть данные по адресу 0x00000080 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x3D44 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCA1 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD0A in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DC59 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 4 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:51:17, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:51:33
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCC4 в функции FormObjects(). Попытка прочесть данные по адресу 0x00000080 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x3334 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCC4 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD2D in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD2D in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DD56 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 4 0x0041DC7C in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 5 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:52:54, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:53:41
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041DCC4 в функции FormObjects(). Попытка прочесть данные по адресу 0x00000080 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x004F52FC (32-bit), Flags: Cmdre0, Thread: 0x3334 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041DCC4 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 1 0x0041DD2D in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 2 0x0041DD2D in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 3 0x0041DD56 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects()
+# 4 0x0041DC7C in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog()
+# 5 0x0041C961 in C:\Users\Мария\Desktop\tree\Tree.exe: main()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 18:52:54, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 20 2024 18:53:41
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x13AC (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D6F9 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C38F in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (34):
+
+     32:         GenInsert(&my_tree);
+     33: 
+=>   34:         TREE_DUMP(my_tree, log, &dump_num);
+     35:     }
+     36: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 22:14:33, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 20 2024 22:15:06
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DC5B в функции Insert() в файле C:/Users/Мария/Desktop/tree/tree_struct.cpp на строке 58. Попытка прочесть данные по адресу 0x00000004 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x184C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DC5B in C:\Users\Мария\Desktop\tree\Tree.exe: Insert() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (58):
+
+     56:         *node = CreateNode(value);
+     57:     }
+=>   58:     else if ((*node)->data > value)
+     59:     {
+     60:         if (!(*node)->left)
+
+# 1 0x0042DB64 in C:\Users\Мария\Desktop\tree\Tree.exe: GenInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (20):
+
+     18:     int value = rand()%100 + rand()%5;
+     19: 
+=>   20:     Insert(&tree->root, value);
+     21: }
+     22: 
+
+# 2 0x0042C328 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (30):
+
+     28:     for (size_t i = 0; i < quantity; i++)
+     29:     {
+=>   30:         GenInsert(&my_tree);
+     31: 
+     32:         TREE_DUMP(my_tree, log, &dump_num);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 22:18:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 20 2024 22:22:30
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DC5B в функции Insert() в файле C:/Users/Мария/Desktop/tree/tree_struct.cpp на строке 58. Попытка прочесть данные по адресу 0x00000004 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x184C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DC5B in C:\Users\Мария\Desktop\tree\Tree.exe: Insert() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (58):
+
+     56:         *node = CreateNode(value);
+     57:     }
+=>   58:     else if ((*node)->data > value)
+     59:     {
+     60:         if (!(*node)->left)
+
+# 1 0x0042DB64 in C:\Users\Мария\Desktop\tree\Tree.exe: GenInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (20):
+
+     18:     int value = rand()%100 + rand()%5;
+     19: 
+=>   20:     Insert(&tree->root, value);
+     21: }
+     22: 
+
+# 2 0x0042C328 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (30):
+
+     28:     for (size_t i = 0; i < quantity; i++)
+     29:     {
+=>   30:         GenInsert(&my_tree);
+     31: 
+     32:         TREE_DUMP(my_tree, log, &dump_num);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 22:18:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 20 2024 22:22:31
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9AF в функции FormObjects() в файле C:/Users/Мария/Desktop/tree/tree_dump.cpp на строке 68. Попытка прочесть данные по адресу 0x38303941 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x27FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9AF in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (68):
+
+     66: {
+     67:     fprintf(tree_dump, "x%p [shape = record, label = \"{ ptr:x%p | data:%d | { <left0>x%p | <right0>x%p }}\"];\n\t", \
+=>   68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+     70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+
+# 1 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 2 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 3 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 4 0x0042DA41 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (71):
+
+     69: 
+     70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+=>   71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+     73: 
+
+# 5 0x0042D962 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (54):
+
+     52: 
+     53:     size_t rank = 1;
+=>   54:     FormObjects(tree.root, tree_dump, rank);
+     55:     ShapeTree(tree.root, tree_dump);
+     56: 
+
+# 6 0x0042C3BB in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (37):
+
+     35:     TreeDtor(&my_tree);
+     36: 
+=>   37:     TREE_DUMP(my_tree, log, &dump_num);
+     38: 
+     39:     fprintf(log, "</pre>\n");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 22:34:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 20 2024 22:34:57
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042D9AF в функции FormObjects() в файле C:/Users/Мария/Desktop/tree/tree_dump.cpp на строке 68. Попытка прочесть данные по адресу 0x38303941 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x27FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042D9AF in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (68):
+
+     66: {
+     67:     fprintf(tree_dump, "x%p [shape = record, label = \"{ ptr:x%p | data:%d | { <left0>x%p | <right0>x%p }}\"];\n\t", \
+=>   68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+     70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+
+# 1 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 2 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 3 0x0042DA18 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (70):
+
+     68:                     node->ptr, node->ptr, node->data, node->left, node->right);
+     69: 
+=>   70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+     71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+
+# 4 0x0042DA41 in C:\Users\Мария\Desktop\tree\Tree.exe: FormObjects() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (71):
+
+     69: 
+     70:     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+=>   71:     if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+     72: }
+     73: 
+
+# 5 0x0042D962 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (54):
+
+     52: 
+     53:     size_t rank = 1;
+=>   54:     FormObjects(tree.root, tree_dump, rank);
+     55:     ShapeTree(tree.root, tree_dump);
+     56: 
+
+# 6 0x0042C3BB in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (37):
+
+     35:     TreeDtor(&my_tree);
+     36: 
+=>   37:     TREE_DUMP(my_tree, log, &dump_num);
+     38: 
+     39:     fprintf(log, "</pre>\n");
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 20 2024 22:34:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 20 2024 22:34:57
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DBD7 в функции ReadInsert() в файле C:/Users/Мария/Desktop/tree/tree_func.cpp на строке 32. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x48A4 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DBD7 in C:\Users\Мария\Desktop\tree\Tree.exe: ReadInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (32):
+
+     30:     int c = getchar();
+     31:     if (c == '(')
+=>   32:         return ReadInsert(node->left);
+     33:     else if (isdigit(c))
+     34:     {
+
+# 1 0x0042C2FA in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (30):
+
+     28:     printf("enter the tree : ");
+     29: 
+=>   30:     my_tree.root = ReadInsert(my_tree.root);
+     31: 
+     32:     //for (size_t i = 0; i < quantity; i++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 15:14:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 15:14:59
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DBD7 в функции ReadInsert() в файле C:/Users/Мария/Desktop/tree/tree_func.cpp на строке 32. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x48A4 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DBD7 in C:\Users\Мария\Desktop\tree\Tree.exe: ReadInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (32):
+
+     30:     int c = getchar();
+     31:     if (c == '(')
+=>   32:         return ReadInsert(node->left);
+     33:     else if (isdigit(c))
+     34:     {
+
+# 1 0x0042C2FA in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (30):
+
+     28:     printf("enter the tree : ");
+     29: 
+=>   30:     my_tree.root = ReadInsert(my_tree.root);
+     31: 
+     32:     //for (size_t i = 0; i < quantity; i++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 15:14:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 15:14:59
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DBD7 в функции ReadInsert() в файле C:/Users/Мария/Desktop/tree/tree_func.cpp на строке 32. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x1364 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DBD7 in C:\Users\Мария\Desktop\tree\Tree.exe: ReadInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (32):
+
+     30:     int c = getchar();
+     31:     if (c == '(')
+=>   32:         return ReadInsert(node->left);
+     33:     else if (isdigit(c))
+     34:     {
+
+# 1 0x0042C2FA in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (25):
+
+     23:     printf("enter the tree : \n");
+     24: 
+=>   25:     my_tree.root = ReadInsert(my_tree.root);
+     26: 
+     27:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 15:28:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 15:30:30
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DBD7 в функции ReadInsert() в файле C:/Users/Мария/Desktop/tree/tree_func.cpp на строке 32. Попытка прочесть данные по адресу 0x00000008 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x1364 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DBD7 in C:\Users\Мария\Desktop\tree\Tree.exe: ReadInsert() at C:/Users/Мария/Desktop/tree/tree_func.cpp (32):
+
+     30:     int c = getchar();
+     31:     if (c == '(')
+=>   32:         return ReadInsert(node->left);
+     33:     else if (isdigit(c))
+     34:     {
+
+# 1 0x0042C2FA in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (25):
+
+     23:     printf("enter the tree : \n");
+     24: 
+=>   25:     my_tree.root = ReadInsert(my_tree.root);
+     26: 
+     27:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 15:28:23, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 15:30:30
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x39EC (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D69D in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C342 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (29):
+
+     27:     my_tree.root = ReadInsert(my_tree.root);
+     28: 
+=>   29:     TREE_DUMP(my_tree, log, &dump_num);
+     30: 
+     31:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 16:55:15, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:06:34
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x60DC (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D69D in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C342 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (29):
+
+     27:     my_tree.root = ReadInsert(my_tree.root);
+     28: 
+=>   29:     TREE_DUMP(my_tree, log, &dump_num);
+     30: 
+     31:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 16:55:15, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:43:04
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x49AC (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D6B1 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C356 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (31):
+
+     29:     my_tree.root = ReadInsert(my_tree.root);
+     30: 
+=>   31:     TREE_DUMP(my_tree, log, &dump_num);
+     32: 
+     33:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 17:44:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:44:28
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x3254 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D6B1 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C356 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (31):
+
+     29:     my_tree.root = ReadInsert(my_tree.root);
+     30: 
+=>   31:     TREE_DUMP(my_tree, log, &dump_num);
+     32: 
+     33:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 17:44:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:46:47
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x57C4 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D6B1 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C356 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (31):
+
+     29:     my_tree.root = ReadInsert(my_tree.root);
+     30: 
+=>   31:     TREE_DUMP(my_tree, log, &dump_num);
+     32: 
+     33:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 17:44:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:47:53
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x1A18 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D6B1 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C356 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (31):
+
+     29:     my_tree.root = ReadInsert(my_tree.root);
+     30: 
+=>   31:     TREE_DUMP(my_tree, log, &dump_num);
+     32: 
+     33:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 17:44:22, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 17:55:35
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x24A0 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D7D5 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C476 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (52):
+
+     50:     my_tree.root = ReadInsert(my_tree.root);
+     51: 
+=>   52:     TREE_DUMP(my_tree, log, &dump_num);
+     53: 
+     54:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 20:21:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 20:22:16
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5A9C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D795 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (12):
+
+     10:                     const char* file, const char* func, const int line)
+     11: {
+=>   12:     assert(tree.root);
+     13:     assert(dump_num);
+     14: 
+
+# 5 0x0042C43B in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (49):
+
+     47:     my_tree.root = ReadInsert(my_tree.root);
+     48: 
+=>   49:     TREE_DUMP(my_tree, log, &dump_num);
+     50: 
+     51:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 22 2024 20:23:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 22 2024 20:23:47
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x6FA0 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D867 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (15):
+
+     13: {
+     14:     assert(tree.root);
+=>   15:     assert(dump_num);
+     16: 
+     17:     fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
+
+# 5 0x0042C3CA in C:\Users\Мария\Desktop\tree\Tree.exe: HardCodeInput() at C:/Users/Мария/Desktop/tree/main.cpp (34):
+
+     32:     my_tree.root = node_add;
+     33: 
+=>   34:     TREE_DUMP(my_tree, log, 0);
+     35: 
+     36:     fprintf(log, "</pre>\n");
+
+# 6 0x0042C2A2 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (18):
+
+     16:     TreeCtor(&my_tree);
+     17: 
+=>   18:     HardCodeInput(my_tree, argv[1]);
+     19: 
+     20:     return 0;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 16:26:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 16:30:22
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7BB0 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D877 in C:\Users\Мария\Desktop\tree\Tree.exe: CreateLog() at C:/Users/Мария/Desktop/tree/tree_dump.cpp (15):
+
+     13: {
+     14:     assert(tree.root);
+=>   15:     assert(dump_num);
+     16: 
+     17:     fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
+
+# 5 0x0042C3D0 in C:\Users\Мария\Desktop\tree\Tree.exe: HardCodeInput() at C:/Users/Мария/Desktop/tree/main.cpp (35):
+
+     33:     my_tree.root = node_add;
+     34: 
+=>   35:     TREE_DUMP(my_tree, log, &dump_num);
+     36: 
+     37:     fprintf(log, "</pre>\n");
+
+# 6 0x0042C2A2 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (18):
+
+     16:     TreeCtor(&my_tree);
+     17: 
+=>   18:     HardCodeInput(my_tree, argv[1]);
+     19: 
+     20:     return 0;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 16:31:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 16:31:48
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x3564 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D89E in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (10):
+
+      8: {
+      9:     printf(RED("error in syntax\n"));
+=>   10:     assert(0);
+     11: }
+     12: 
+
+# 5 0x0042D919 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (25):
+
+     23:     if (*p != old_p)
+     24:     {
+=>   25:         SyntaxError();
+     26:     }
+     27: 
+
+# 6 0x0042D991 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (45):
+
+     43:     }
+     44: 
+=>   45:     return GetN(p, s);
+     46: }
+     47: 
+
+# 7 0x0042DA52 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (68):
+
+     66: int GetT(size_t* p, char* s)
+     67: {
+=>   68:     int val = GetP(p, s);
+     69: 
+     70:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D9AB in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (50):
+
+     48: int GetE(size_t* p, char* s)
+     49: {
+=>   50:     int val = GetT(p, s);
+     51: 
+     52:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DB01 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (87):
+
+     85: int GetG(size_t* p, char* s)
+     86: {
+=>   87:     int val = GetE(p, s);
+     88: 
+     89:     if (s[*p] != '$')
+
+#10 0x0042C2BF in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (24):
+
+     22:     char s[20];
+     23:     scanf("%s", s);
+=>   24:     int ans = GetG(&p, s);
+     25: 
+     26:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:05:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:08:06
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7FEC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D8B2 in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (10):
+
+      8: {
+      9:     printf(RED("error in syntax\n"));
+=>   10:     assert(0);
+     11: }
+     12: 
+
+# 5 0x0042D92D in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (25):
+
+     23:     if (*p != old_p)
+     24:     {
+=>   25:         SyntaxError();
+     26:     }
+     27: 
+
+# 6 0x0042D9A5 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (45):
+
+     43:     }
+     44: 
+=>   45:     return GetN(p, s);
+     46: }
+     47: 
+
+# 7 0x0042DA66 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (68):
+
+     66: int GetT(size_t* p, char* s)
+     67: {
+=>   68:     int val = GetP(p, s);
+     69: 
+     70:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D9BF in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (50):
+
+     48: int GetE(size_t* p, char* s)
+     49: {
+=>   50:     int val = GetT(p, s);
+     51: 
+     52:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DB15 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (87):
+
+     85: int GetG(size_t* p, char* s)
+     86: {
+=>   87:     int val = GetE(p, s);
+     88: 
+     89:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:09:38
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x39A8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D8B2 in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (10):
+
+      8: {
+      9:     printf(RED("error in syntax\n"));
+=>   10:     assert(0);
+     11: }
+     12: 
+
+# 5 0x0042D92D in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (25):
+
+     23:     if (*p != old_p)
+     24:     {
+=>   25:         SyntaxError();
+     26:     }
+     27: 
+
+# 6 0x0042D9A5 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (45):
+
+     43:     }
+     44: 
+=>   45:     return GetN(p, s);
+     46: }
+     47: 
+
+# 7 0x0042DA66 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (68):
+
+     66: int GetT(size_t* p, char* s)
+     67: {
+=>   68:     int val = GetP(p, s);
+     69: 
+     70:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D9BF in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (50):
+
+     48: int GetE(size_t* p, char* s)
+     49: {
+=>   50:     int val = GetT(p, s);
+     51: 
+     52:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DB15 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (87):
+
+     85: int GetG(size_t* p, char* s)
+     86: {
+=>   87:     int val = GetE(p, s);
+     88: 
+     89:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:10:00
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x502C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042D9A9 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (37):
+
+     35:     if (*p != old_p)
+     36:     {
+=>   37:         SyntaxError(*p, s);
+     38:     }
+     39: 
+
+# 6 0x0042DA30 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55:     }
+     56: 
+=>   57:     return GetN(p, s);
+     58: }
+     59: 
+
+# 7 0x0042DAF1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (80):
+
+     78: int GetT(size_t* p, char* s)
+     79: {
+=>   80:     int val = GetP(p, s);
+     81: 
+     82:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042DA4A in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (62):
+
+     60: int GetE(size_t* p, char* s)
+     61: {
+=>   62:     int val = GetT(p, s);
+     63: 
+     64:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DBA0 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (99):
+
+     97: int GetG(size_t* p, char* s)
+     98: {
+=>   99:     int val = GetE(p, s);
+    100: 
+    101:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:14:14
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5E78 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042D9A9 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (37):
+
+     35:     if (*p != old_p)
+     36:     {
+=>   37:         SyntaxError(*p, s);
+     38:     }
+     39: 
+
+# 6 0x0042DA30 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55:     }
+     56: 
+=>   57:     return GetN(p, s);
+     58: }
+     59: 
+
+# 7 0x0042DAF1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (80):
+
+     78: int GetT(size_t* p, char* s)
+     79: {
+=>   80:     int val = GetP(p, s);
+     81: 
+     82:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042DA4A in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (62):
+
+     60: int GetE(size_t* p, char* s)
+     61: {
+=>   62:     int val = GetT(p, s);
+     63: 
+     64:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DBA0 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (99):
+
+     97: int GetG(size_t* p, char* s)
+     98: {
+=>   99:     int val = GetE(p, s);
+    100: 
+    101:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:15:19
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5690 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042DBC8 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (102):
+
+    100: 
+    101:     if (s[*p] != '$')
+=>  102:         SyntaxError(*p, s);
+    103:     (*p)++;
+    104: 
+
+# 6 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 18:31:38
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5EFC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042DBBF in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (102):
+
+    100:     if (*p == old_p)
+    101:     {
+=>  102:         SyntaxError(*p, s);
+    103:     }
+    104: 
+
+# 6 0x0042DB33 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (87):
+
+     85:     }
+     86: 
+=>   87:     return GetN(p, s);
+     88: }
+     89: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:09:17
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAC1 в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7B2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAC1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:10:08
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAC1 в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7B2C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAC1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:10:09
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x8050 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042D95F in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (30):
+
+     28: 
+     29:     if (s[*p] != '$')
+=>   30:         SyntaxError(*p, s);
+     31:     (*p)++;
+     32: 
+
+# 6 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:22:20
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x31A82815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x82DC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:24:55
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x31A82815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x82DC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:24:55
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x009F2815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x66A8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:29:47
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x009F2815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x66A8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:29:47
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x24B03011 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7598 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:30:18
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x24B03011 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7598 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:30:18
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B2319 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x6668 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:31:04
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B2319 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x6668 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:31:04
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x009F2815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x6C20 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:34:26
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x009F2815 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x6C20 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:34:27
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x8098 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:36:49
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAAB в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 75. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x8098 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAAB in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (75):
+
+     73: int GetP(size_t* p, char* s)
+     74: {
+=>   75:     if (s[*p] == '(')
+     76:     {
+     77:         (*p)++;
+
+# 1 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:36:50
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x1CC0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (22):
+
+     20:     printf("|\n");
+     21: 
+=>   22:     assert(0);
+     23: }
+     24: 
+
+# 5 0x0042DBA9 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (102):
+
+    100:     if (*p == old_p)
+    101:     {
+=>  102:         SyntaxError(*p, s);
+    103:     }
+    104: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (87):
+
+     85:     }
+     86: 
+=>   87:     return GetN(p, s);
+     88: }
+     89: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (56):
+
+     54: int GetT(size_t* p, char* s)
+     55: {
+=>   56:     int val = GetP(p, s);
+     57: 
+     58:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (38):
+
+     36: int GetE(size_t* p, char* s)
+     37: {
+=>   38:     int val = GetT(p, s);
+     39: 
+     40:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (27):
+
+     25: int GetG(size_t* p, char* s)
+     26: {
+=>   27:     int val = GetE(p, s);
+     28: 
+     29:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:38:28
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x3890 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DBBC in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (105):
+
+    103:     if (*p == old_p)
+    104:     {
+=>  105:         SyntaxError(*p, s);
+    106:     }
+    107: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (88):
+
+     86:     }
+     87: 
+=>   88:     return GetN(p, s);
+     89: }
+     90: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55: int GetT(size_t* p, char* s)
+     56: {
+=>   57:     int val = GetP(p, s);
+     58: 
+     59:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (39):
+
+     37: int GetE(size_t* p, char* s)
+     38: {
+=>   39:     int val = GetT(p, s);
+     40: 
+     41:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (28):
+
+     26: int GetG(size_t* p, char* s)
+     27: {
+=>   28:     int val = GetE(p, s);
+     29: 
+     30:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:43:59
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5780 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DBD1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (106):
+
+    104:     if (*p == old_p)
+    105:     {
+=>  106:         SyntaxError(*p, s);
+    107:     }
+    108: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (88):
+
+     86:     }
+     87: 
+=>   88:     return GetN(p, s);
+     89: }
+     90: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55: int GetT(size_t* p, char* s)
+     56: {
+=>   57:     int val = GetP(p, s);
+     58: 
+     59:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (39):
+
+     37: int GetE(size_t* p, char* s)
+     38: {
+=>   39:     int val = GetT(p, s);
+     40: 
+     41:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (28):
+
+     26: int GetG(size_t* p, char* s)
+     27: {
+=>   28:     int val = GetE(p, s);
+     29: 
+     30:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:45:31
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x4878 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DBD1 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (106):
+
+    104:     if (*p == old_p)
+    105:     {
+=>  106:         SyntaxError(*p, s);
+    107:     }
+    108: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (88):
+
+     86:     }
+     87: 
+=>   88:     return GetN(p, s);
+     89: }
+     90: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55: int GetT(size_t* p, char* s)
+     56: {
+=>   57:     int val = GetP(p, s);
+     58: 
+     59:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (39):
+
+     37: int GetE(size_t* p, char* s)
+     38: {
+=>   39:     int val = GetT(p, s);
+     40: 
+     41:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (28):
+
+     26: int GetG(size_t* p, char* s)
+     27: {
+=>   28:     int val = GetE(p, s);
+     29: 
+     30:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:45:58
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7080 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DBCF in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (106):
+
+    104:     if (*p == old_p)
+    105:     {
+=>  106:         SyntaxError(*p, s);
+    107:     }
+    108: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (88):
+
+     86:     }
+     87: 
+=>   88:     return GetN(p, s);
+     89: }
+     90: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55: int GetT(size_t* p, char* s)
+     56: {
+=>   57:     int val = GetP(p, s);
+     58: 
+     59:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (39):
+
+     37: int GetE(size_t* p, char* s)
+     38: {
+=>   39:     int val = GetT(p, s);
+     40: 
+     41:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (28):
+
+     26: int GetG(size_t* p, char* s)
+     27: {
+=>   28:     int val = GetE(p, s);
+     29: 
+     30:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:46:58
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7A24 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DBCF in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (106):
+
+    104:     if (*p == old_p)
+    105:     {
+=>  106:         SyntaxError(*p, s);
+    107:     }
+    108: 
+
+# 6 0x0042DB1D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (88):
+
+     86:     }
+     87:     else
+=>   88:         return GetN(p, s);
+     89: }
+     90: 
+
+# 7 0x0042DA1A in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (57):
+
+     55: int GetT(size_t* p, char* s)
+     56: {
+=>   57:     int val = GetP(p, s);
+     58: 
+     59:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D989 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (39):
+
+     37: int GetE(size_t* p, char* s)
+     38: {
+=>   39:     int val = GetT(p, s);
+     40: 
+     41:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D937 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (28):
+
+     26: int GetG(size_t* p, char* s)
+     27: {
+=>   28:     int val = GetE(p, s);
+     29: 
+     30:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 20:49:06
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x7204 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DC38 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (111):
+
+    109:     if (*p == old_p)
+    110:     {
+=>  111:         SyntaxError(*p, s);
+    112:     }
+    113: 
+
+# 6 0x0042DB71 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (92):
+
+     90:     }
+     91:     else
+=>   92:         return GetN(p, s);
+     93: }
+     94: 
+
+# 7 0x0042DA59 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     int val = GetP(p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D9B3 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     int val = GetT(p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D94C in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     int val = GetE(p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:01:48
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x2768 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D91F in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DC38 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (111):
+
+    109:     if (*p == old_p)
+    110:     {
+=>  111:         SyntaxError(*p, s);
+    112:     }
+    113: 
+
+# 6 0x0042DB71 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (92):
+
+     90:     }
+     91:     else
+=>   92:         return GetN(p, s);
+     93: }
+     94: 
+
+# 7 0x0042DA59 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     int val = GetP(p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042D9B3 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     int val = GetT(p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042D94C in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     int val = GetE(p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+#10 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:02:08
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAFF в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 80. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5688 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAFF in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (80):
+
+     78: {
+     79:     ON_DEBUG(printf("GetP : p = %d\n", *p);)
+=>   80:     if (s[*p] == '(')
+     81:     {
+     82:         (*p)++;
+
+# 1 0x0042DA59 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     int val = GetP(p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D9B3 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     int val = GetT(p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D94C in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     int val = GetE(p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:04:28
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042DAFF в функции GetP() в файле C:/Users/Мария/Desktop/tree/calculator.cpp на строке 80. Попытка прочесть данные по адресу 0x007B230D в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: Cmdre0, Thread: 0x5688 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042DAFF in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (80):
+
+     78: {
+     79:     ON_DEBUG(printf("GetP : p = %d\n", *p);)
+=>   80:     if (s[*p] == '(')
+     81:     {
+     82:         (*p)++;
+
+# 1 0x0042DA59 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     int val = GetP(p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 2 0x0042D9B3 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     int val = GetT(p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 3 0x0042D94C in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     int val = GetE(p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+# 4 0x0042C2D3 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25: 
+     26:     printf(BLUE("the gotten string is : '%s'\n"), s);
+=>   27:     int ans = GetG(&p, s);
+     28: 
+     29:     printf("The answer is : %d\n", ans);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 18:09:32, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:04:28
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------

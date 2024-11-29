@@ -1,0 +1,16 @@
+((74(43))35((34)34))
+(
+    (
+        74    node->left create ||
+            (         ^         \/
+                43    |  node->left->right create
+                    )
+                        )        ^
+                            35   | node create
+                                (
+                                    (
+                                        34
+                                            )
+                                                34
+                                                    )
+                                                        )
