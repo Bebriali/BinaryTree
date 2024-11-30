@@ -23,10 +23,10 @@ void SyntaxError(size_t p, char* s)
     assert(0);
 }
 
-int GetG(size_t* p, char* s)
+Node_t* GetG(Tree_t* tree, size_t* p, char* s)
 {
     ON_DEBUG(printf("GetG : p = %d\n", *p);)
-    int val = GetE(p, s);
+    Node_t* val = GetE(tree, p, s);
 
     if (s[*p] != '$')
         SyntaxError(*p, s);
@@ -35,29 +35,29 @@ int GetG(size_t* p, char* s)
     return val;
 }
 
-int GetE(size_t* p, char* s)
+Node_t* GetE(Tree_t* tree, size_t* p, char* s)
 {
     ON_DEBUG(printf("GetE : p = %d\n", *p);)
-    int val = GetT(p, s);
+    Node_t* val = GetT(tree, p, s);
 
     while (s[*p] == '+' || s[*p] == '-')
     {
         int op = s[*p];
         (*p)++;
 
-        int val_extra = GetT(p, s);
+        Node_t* val_extra = GetT(tree, p, s);
 
-        if (op == '+') val += val_extra;
-        if (op == '-') val -= val_extra;
+        if (op == '+') val = CreateNode(tree, ADD, OPN, val, val_extra);
+        if (op == '-') val = CreateNode(tree, SUB, OPN, val, val_extra);
     }
 
     return val;
 }
 
-int GetT(size_t* p, char* s)
+Node_t* GetT(Tree_t* tree, size_t* p, char* s)
 {
     ON_DEBUG(printf("GetT : p = %d\n", *p);)
-    int val = GetP(p, s);
+    Node_t* val = GetP(tree, p, s);
 
     while (s[*p] == '*' || s[*p] == '/')
     {
@@ -65,22 +65,22 @@ int GetT(size_t* p, char* s)
 
         (*p)++;
 
-        int val_extra = GetP(p, s);
+        Node_t* val_extra = GetP(tree, p, s);
 
-        if (op == '*') val *= val_extra;
-        if (op == '/') val /= val_extra;
+        if (op == '*') val = CreateNode(tree, MUL, OPN, val, val_extra);
+        if (op == '/') val = CreateNode(tree, DIV, OPN, val, val_extra);
     }
 
     return val;
 }
 
-int GetP(size_t* p, char* s)
+Node_t* GetP(Tree_t* tree, size_t* p, char* s)
 {
     ON_DEBUG(printf("GetP : p = %d\n", *p);)
     if (s[*p] == '(')
     {
         (*p)++;
-        int val = GetE(p, s);
+        Node_t* val = GetE(tree, p, s);
 
         if (s[*p] != ')')
             SyntaxError(*p, s);
@@ -89,10 +89,10 @@ int GetP(size_t* p, char* s)
         return val;
     }
     else
-        return GetN(p, s);
+        return GetN(tree, p, s);
 }
 
-int GetN(size_t* p, char* s)
+Node_t* GetN(Tree_t* tree, size_t* p, char* s)
 {
     ON_DEBUG(printf("GetN : p = %d\n", *p);)
     int val = 0;
@@ -111,5 +111,5 @@ int GetN(size_t* p, char* s)
         SyntaxError(*p, s);
     }
 
-    return val;
+    return CreateNode(tree, val, NUM, NULL, NULL);
 }

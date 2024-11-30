@@ -5,19 +5,62 @@
 
 #include "calculator.h"
 #include "color.h"
+#include "differentiator.h"
 #include "tree_dump.h"
 #include "tree_func.h"
 #include "tree_struct.h"
 
+const int MAX_LEN_EXAMPLE = 100;
+
 void TestInput(Tree_t tree, char* logfile);
 void HardCodeInput(Tree_t tree, char* logfile);
+
+void BuildTree(Tree_t* tree, char* logfile);
+
+void Calculate(void);
 
 int main(int argc, char* argv[])
 {
     Tree_t my_tree = {};
     TreeCtor(&my_tree);
 
-    printf("enter simple example : \n");
+    BuildTree(&my_tree, argv[1]);
+
+    Tree_t diff_tree = {};
+    TreeCtor(&diff_tree);
+    diff_tree.root = Diff(&my_tree, my_tree.root);
+
+    TREE_DUMP(my_tree, NULL, NULL);
+    TREE_DUMP(diff_tree, NULL, NULL);
+
+    TreeDtor(&my_tree);
+
+    return 0;
+}
+
+void BuildTree(Tree_t* tree, char* logfile)
+{
+    size_t dump_num = 0;
+    FILE* log = fopen(logfile, "wb");
+    fprintf(log, "<pre>\n");
+
+    size_t p = 0;
+    char s[MAX_LEN_EXAMPLE];
+    printf("enter the sum : \n");
+    scanf("%s", s);
+
+    tree->root = GetG(tree, &p, s);
+
+    TREE_DUMP(*tree, log, &dump_num);
+
+    fprintf(log, "</pre>\n");
+    fclose(log);
+}
+/*
+
+void Calculate(void)
+{
+    printf("enter simple sum : \n");
 
     size_t p = 0;
     char s[100];
@@ -28,9 +71,8 @@ int main(int argc, char* argv[])
     int ans = GetG(&p, s);
 
     printf("The answer is : %d\n", ans);
-
-    return 0;
 }
+*/
 
 void HardCodeInput(Tree_t my_tree, char* logfile)
 {

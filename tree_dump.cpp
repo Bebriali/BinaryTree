@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "tree_dump.h"
 #include "color.h"
+#include "debug_info.h"
+#include "tree_dump.h"
 
 const int SYS_COM_SIZE = 40;
 
@@ -12,12 +13,14 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
                     const char* file, const char* func, const int line)
 {
     assert(tree.root);
-    assert(dump_num);
-
-    fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
-    fprintf(log, "file : %s\n", file);
-    fprintf(log, "func : %s\n", func);
-    fprintf(log, "<FONT color = >line : %d</FONT>\n", line);
+    size_t dump_number = (dump_num) ? *dump_num : 0;
+    if (log)
+    {
+        fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
+        fprintf(log, "file : %s\n", file);
+        fprintf(log, "func : %s\n", func);
+        fprintf(log, "<FONT color = >line : %d</FONT>\n", line);
+    }
 
     char* pic_name = (char*)calloc(10, sizeof(char));
     if (pic_name == NULL)
@@ -26,10 +29,10 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
         return PTR_ERROR;
     }
 
-    sprintf(pic_name, "log/%d.png", *dump_num);
+    sprintf(pic_name, "log/%d.png", dump_number);
 
-
-    fprintf(log, "<img src = %s>\n", pic_name);
+    if (log)
+        fprintf(log, "<img src = %s>\n", pic_name);
 
     char* filename = (char*)calloc(10, sizeof(char));
     if (filename == NULL)
@@ -37,7 +40,8 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
         printf(RED("invalid callocation\n"));
         return PTR_ERROR;
     }
-    sprintf(filename, "log/%d.dot", *dump_num);
+
+    sprintf(filename, "log/%d.dot", dump_number);
 
     FILE* tree_dump = fopen(filename, "wb");
     if (tree_dump == NULL)
@@ -62,12 +66,12 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
     free(filename);
 
     char system_command[SYS_COM_SIZE];
-    sprintf(system_command, "dot ./log/%d.dot -Tpng -o ./log/%d.png", *dump_num, *dump_num);
+    sprintf(system_command, "dot ./log/%d.dot -Tpng -o ./log/%d.png", dump_number, dump_number);
 
-    int system_code = system(system_command);
-    printf("system_code = %d\n", system_code);
+    ON_DEBUG(int system_code =) system(system_command);
+    ON_DEBUG(printf("system_code = %d\n", system_code);)
 
-    (*dump_num)++;
+    if (dump_num) (*dump_num)++;
     return NO_ERRORS;
 }
 

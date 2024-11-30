@@ -3886,3 +3886,1419 @@ Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
 Directory:	C:\Users\Мария\Desktop\tree
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x66C8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D9E3 in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DDD3 in C:\Users\Мария\Desktop\tree\Tree.exe: GetN() at C:/Users/Мария/Desktop/tree/calculator.cpp (111):
+
+    109:     if (*p == old_p)
+    110:     {
+=>  111:         SyntaxError(*p, s);
+    112:     }
+    113: 
+
+# 6 0x0042DD0C in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (92):
+
+     90:     }
+     91:     else
+=>   92:         return GetN(tree, p, s);
+     93: }
+     94: 
+
+# 7 0x0042DB90 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     Node_t* val = GetP(tree, p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 8 0x0042DA85 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     Node_t* val = GetT(tree, p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 9 0x0042DCB9 in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (83):
+
+     81:     {
+     82:         (*p)++;
+=>   83:         Node_t* val = GetE(tree, p, s);
+     84: 
+     85:         if (s[*p] != ')')
+
+#10 0x0042DB90 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     Node_t* val = GetP(tree, p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+#11 0x0042DA85 in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     Node_t* val = GetT(tree, p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+#12 0x0042DA17 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     Node_t* val = GetE(tree, p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+#13 0x0042C345 in C:\Users\Мария\Desktop\tree\Tree.exe: BuildTree() at C:/Users/Мария/Desktop/tree/main.cpp (44):
+
+     42:     scanf("%s", s);
+     43: 
+=>   44:     tree->root = GetG(tree, &p, s);
+     45: 
+     46:     TREE_DUMP(*tree, log, &dump_num);
+
+#14 0x0042C292 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (26):
+
+     24:     TreeCtor(&my_tree);
+     25: 
+=>   26:     BuildTree(&my_tree, argv[1]);
+     27: 
+     28:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 21:45:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:45:15
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x4294 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411881 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042D9E3 in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042DA3F in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (32):
+
+     30: 
+     31:     if (s[*p] != '$')
+=>   32:         SyntaxError(*p, s);
+     33:     (*p)++;
+     34: 
+
+# 6 0x0042C345 in C:\Users\Мария\Desktop\tree\Tree.exe: BuildTree() at C:/Users/Мария/Desktop/tree/main.cpp (44):
+
+     42:     scanf("%s", s);
+     43: 
+=>   44:     tree->root = GetG(tree, &p, s);
+     45: 
+     46:     TREE_DUMP(*tree, log, &dump_num);
+
+# 7 0x0042C292 in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (26):
+
+     24:     TreeCtor(&my_tree);
+     25: 
+=>   26:     BuildTree(&my_tree, argv[1]);
+     27: 
+     28:     TreeDtor(&my_tree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 21:45:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 21:46:25
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x7AF8 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411BB9 in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x0042DDA3 in C:\Users\Мария\Desktop\tree\Tree.exe: SyntaxError() at C:/Users/Мария/Desktop/tree/calculator.cpp (23):
+
+     21:     printf("|\n");
+     22: 
+=>   23:     assert(0);
+     24: }
+     25: 
+
+# 5 0x0042E04D in C:\Users\Мария\Desktop\tree\Tree.exe: GetP() at C:/Users/Мария/Desktop/tree/calculator.cpp (86):
+
+     84: 
+     85:         if (s[*p] != ')')
+=>   86:             SyntaxError(*p, s);
+     87:         (*p)++;
+     88: 
+
+# 6 0x0042DF11 in C:\Users\Мария\Desktop\tree\Tree.exe: GetT() at C:/Users/Мария/Desktop/tree/calculator.cpp (60):
+
+     58: {
+     59:     ON_DEBUG(printf("GetT : p = %d\n", *p);)
+=>   60:     Node_t* val = GetP(tree, p, s);
+     61: 
+     62:     while (s[*p] == '*' || s[*p] == '/')
+
+# 7 0x0042DE1B in C:\Users\Мария\Desktop\tree\Tree.exe: GetE() at C:/Users/Мария/Desktop/tree/calculator.cpp (41):
+
+     39: {
+     40:     ON_DEBUG(printf("GetE : p = %d\n", *p);)
+=>   41:     Node_t* val = GetT(tree, p, s);
+     42: 
+     43:     while (s[*p] == '+' || s[*p] == '-')
+
+# 8 0x0042DDC2 in C:\Users\Мария\Desktop\tree\Tree.exe: GetG() at C:/Users/Мария/Desktop/tree/calculator.cpp (29):
+
+     27: {
+     28:     ON_DEBUG(printf("GetG : p = %d\n", *p);)
+=>   29:     Node_t* val = GetE(tree, p, s);
+     30: 
+     31:     if (s[*p] != '$')
+
+# 9 0x0042C703 in C:\Users\Мария\Desktop\tree\Tree.exe: BuildTree() at C:/Users/Мария/Desktop/tree/main.cpp (51):
+
+     49:     scanf("%s", s);
+     50: 
+=>   51:     tree->root = GetG(tree, &p, s);
+     52: 
+     53:     TREE_DUMP(*tree, log, &dump_num);
+
+#10 0x0042C5CE in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (27):
+
+     25:     TreeCtor(&my_tree);
+     26: 
+=>   27:     BuildTree(&my_tree, argv[1]);
+     28: 
+     29:     Tree_t diff_tree = {};
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:14:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 23:14:27
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x3C24 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00411CDD in C:\Users\Мария\Desktop\tree\Tree.exe: (anonymous namespace)::TX::_txOnSignal() at c:/users/мария/codeblocks/mingw/include/txlib.h (11078)
+# 1 0x75C671F1 in C:\WINDOWS\System32\msvcrt.dll: raise()
+# 2 0x75C6B69B in C:\WINDOWS\System32\msvcrt.dll: abort()
+# 3 0x75C6802A in C:\WINDOWS\System32\msvcrt.dll: assert()
+
+# 4 0x004017B5 in C:\Users\Мария\Desktop\tree\Tree.exe: Copy() at C:/Users/Мария/Desktop/tree/differentiator.cpp (39):
+
+     37: {
+     38:     assert(tree);
+=>   39:     assert(node);
+     40: 
+     41:     if (node == NULL)
+
+# 5 0x004017D6 in C:\Users\Мария\Desktop\tree\Tree.exe: Copy() at C:/Users/Мария/Desktop/tree/differentiator.cpp (43):
+
+     41:     if (node == NULL)
+     42:         return node;
+=>   43:     Node_t* new_node = CreateNode(tree, node->data, node->type, Copy(tree, node->left), Copy(tree, node->right));
+     44: 
+     45:     NodeDtor(&node);
+
+# 6 0x004017D6 in C:\Users\Мария\Desktop\tree\Tree.exe: Copy() at C:/Users/Мария/Desktop/tree/differentiator.cpp (43):
+
+     41:     if (node == NULL)
+     42:         return node;
+=>   43:     Node_t* new_node = CreateNode(tree, node->data, node->type, Copy(tree, node->left), Copy(tree, node->right));
+     44: 
+     45:     NodeDtor(&node);
+
+# 7 0x0040160F in C:\Users\Мария\Desktop\tree\Tree.exe: Diff() at C:/Users/Мария/Desktop/tree/differentiator.cpp (25):
+
+     23:                 return CreateNode(tree, DIV, OPN, CreateNode(tree, SUB, OPN, CreateNode(tree, MUL, OPN, Diff(tree, node->left), Copy(tree, node->right)), \
+     24:                                                                                 CreateNode(tree, MUL, OPN, Copy(tree, node->left), Diff(tree, node->right))), \
+=>   25:                                                     CreateNode(tree, MUL, OPN, Copy(tree, node->right), Copy(tree, node->right)));
+     26:             default:
+     27:                 printf(RED("undefined differential of function or wrong type of operation : "));
+
+# 8 0x0042C72C in C:\Users\Мария\Desktop\tree\Tree.exe: main() at C:/Users/Мария/Desktop/tree/main.cpp (31):
+
+     29:     Tree_t diff_tree = {};
+     30:     TreeCtor(&diff_tree);
+=>   31:     diff_tree.root = Diff(&my_tree, my_tree.root);
+     32: 
+     33:     TREE_DUMP(my_tree, NULL, NULL);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 23:30:13
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x0042E806 в функции NodeDtor() в файле C:/Users/Мария/Desktop/tree/tree_struct.cpp на строке 50 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2774 (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042E806 in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 1 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 2 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 3 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 4 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 5 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 6 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 7 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 8 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 9 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#10 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#11 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#12 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#13 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#14 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#15 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#16 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#17 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#18 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#19 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#20 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#21 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#22 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#23 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#24 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#25 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#26 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#27 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#28 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#29 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#30 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#31 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#32 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#33 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#34 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#35 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#36 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#37 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#38 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#39 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#40 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#41 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#42 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#43 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#44 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#45 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#46 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#47 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#48 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#49 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#50 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#51 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#52 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#53 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#54 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#55 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#56 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#57 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#58 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#59 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#60 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#61 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 23:31:00
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Мария\Desktop\tree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x0042E806 в функции NodeDtor() в файле C:/Users/Мария/Desktop/tree/tree_struct.cpp на строке 50 в модуле C:\Users\Мария\Desktop\tree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2774 (Main), GetLastError(): 87 (Параметр задан неверно). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042E806 in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 1 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 2 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 3 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 4 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 5 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 6 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 7 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 8 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+# 9 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#10 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#11 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#12 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#13 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#14 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#15 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#16 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#17 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#18 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#19 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#20 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#21 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#22 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#23 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#24 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#25 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#26 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#27 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#28 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#29 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#30 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#31 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#32 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#33 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#34 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#35 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#36 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#37 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#38 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#39 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#40 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#41 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#42 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#43 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#44 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#45 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#46 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#47 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#48 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#49 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#50 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#51 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#52 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#53 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#54 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#55 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#56 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#57 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#58 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#59 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#60 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+#61 0x0042E80E in C:\Users\Мария\Desktop\tree\Tree.exe: NodeDtor() at C:/Users/Мария/Desktop/tree/tree_struct.cpp (50):
+
+     48:     }
+     49: 
+=>   50:     if ((*node)->left)  NodeDtor(&(*node)->left);
+     51:     if ((*node)->right) NodeDtor(&(*node)->right);
+     52: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 29 2024 23:31:00
+
+Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
+Directory:	C:\Users\Мария\Desktop\tree
+
+--------------------------------------------------
