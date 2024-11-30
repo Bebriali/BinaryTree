@@ -5302,3 +5302,619 @@ Run file:	C:\Users\Мария\Desktop\tree\Tree.exe
 Directory:	C:\Users\Мария\Desktop\tree
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x0042E806 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2E5C (Main), GetLastError(): 87 (Параметр задан неверно), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 17:59:02
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x0042E806 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2E5C (Main), GetLastError(): 87 (Параметр задан неверно), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 17:59:02
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E595. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x431C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:00:35
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E595. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x431C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:00:36
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E599. Попытка прочесть данные по адресу 0x00000074 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2928 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:06:10
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E599. Попытка прочесть данные по адресу 0x00000074 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2928 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:06:10
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x76159157 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x32B8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:07:32
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x76159157 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x32B8 (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\мария\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 29 2024 23:16:36, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:07:33
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E5A9. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x380C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:13:01
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E5A9. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x380C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:13:01
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x7790B49D в модуле C:\Windows\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x4A08 (Main), GetLastError(): 87 (Параметр задан неверно), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:13:22
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Ю-ху! Переполнение стека!
+
+#1: Исключение EXCEPTION_STACK_OVERFLOW (0xC00000FD) при выполнении кода по адресу 0x7790B49D в модуле C:\Windows\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x4A08 (Main), GetLastError(): 87 (Параметр задан неверно), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:13:22
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E5A9. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x114C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:27:02
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0042E5A9. Попытка прочесть данные по адресу 0x00000067 в модуле C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x114C (Main), GetLastError(): 183 (Невозможно создать файл, так как он уже существует), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 18:27:02
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x46FC (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 20:03:22
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x397C (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 20:04:45
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x26F8 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 20:05:49
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005082FC (32-bit), Flags: Cmdre0, Thread: 0x2D98 (Main), errno: 22 (Invalid argument). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\langs\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 30 2024 18:12:06, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 30 2024 20:07:46
+
+Run file:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree\Tree.exe
+Directory:	C:\Users\1\Desktop\max_folder\inst\c_learning\programms\BinaryTree
+
+--------------------------------------------------

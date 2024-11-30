@@ -1,4 +1,4 @@
-#include "TxLib.h"
+//#include "TxLib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -21,19 +21,34 @@ void Calculate(void);
 
 int main(int argc, char* argv[])
 {
+    const char* logfile = argv[1];
+    FILE* log = fopen(logfile, "wb");
+    fprintf(log, "<pre>\n");
+
+
     Tree_t my_tree = {};
-    TreeCtor(&my_tree);
+    TreeCtor(&my_tree);   my_tree.log = log;   my_tree.dump_num   = (size_t) &my_tree;
 
     BuildTree(&my_tree, argv[1]);
+    TREE_DUMP(my_tree,   my_tree.log,   &my_tree.dump_num);
 
     Tree_t diff_tree = {};
-    TreeCtor(&diff_tree);
+    TreeCtor(&diff_tree); diff_tree.log = log; diff_tree.dump_num = (size_t) &diff_tree;
     diff_tree.root = Diff(&my_tree, my_tree.root);
+    TREE_DUMP(diff_tree, diff_tree.log, &diff_tree.dump_num);
+    
+    Tree_t simp_diff = {};
+    TreeCtor(&simp_diff); simp_diff.log = log; simp_diff.dump_num = (size_t) &simp_diff;
+    simp_diff.root = Simplify(&diff_tree, diff_tree.root);
+    TREE_DUMP(simp_diff, simp_diff.log, &simp_diff.dump_num);
 
-    TREE_DUMP(my_tree, NULL, NULL);
-    TREE_DUMP(diff_tree, NULL, NULL);
 
     TreeDtor(&my_tree);
+    TreeDtor(&diff_tree);
+
+
+    fprintf(log, "</pre>\n");
+    fclose(log);
 
     return 0;
 }

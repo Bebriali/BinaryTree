@@ -81,7 +81,7 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 
     if (node->type == VAR)
     {
-        fprintf(tree_dump, "data:x");
+        fprintf(tree_dump, "data:%c", node->data);
     }
     else if (node->type == NUM)
     {

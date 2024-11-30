@@ -43,6 +43,8 @@ struct Tree_t
 {
     Node_t* root;
     size_t size;
+    FILE* log;
+    size_t dump_num;
     Variable var_list[MAX_VAR_NUM];
 };
 

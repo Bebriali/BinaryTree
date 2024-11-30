@@ -1,9 +1,11 @@
-#include <stdio.h>
 #include <assert.h>
+#include <stdio.h>
+#include <ctype.h>
 
 #include "calculator.h"
 #include "color.h"
 #include "debug_info.h"
+#include "differentiator.h"
 
 void SyntaxError(size_t p, char* s)
 {
@@ -47,8 +49,8 @@ Node_t* GetE(Tree_t* tree, size_t* p, char* s)
 
         Node_t* val_extra = GetT(tree, p, s);
 
-        if (op == '+') val = CreateNode(tree, ADD, OPN, val, val_extra);
-        if (op == '-') val = CreateNode(tree, SUB, OPN, val, val_extra);
+        if (op == '+') val = _ADD(val, val_extra);
+        if (op == '-') val = _SUB(val, val_extra);
     }
 
     return val;
@@ -67,8 +69,8 @@ Node_t* GetT(Tree_t* tree, size_t* p, char* s)
 
         Node_t* val_extra = GetP(tree, p, s);
 
-        if (op == '*') val = CreateNode(tree, MUL, OPN, val, val_extra);
-        if (op == '/') val = CreateNode(tree, DIV, OPN, val, val_extra);
+        if (op == '*') val = _MUL(val, val_extra);
+        if (op == '/') val = _DIV(val, val_extra);
     }
 
     return val;
@@ -88,8 +90,10 @@ Node_t* GetP(Tree_t* tree, size_t* p, char* s)
 
         return val;
     }
-    else
+    else if (isdigit(s[*p]))
         return GetN(tree, p, s);
+    else
+        return GetV(tree, p, s);
 }
 
 Node_t* GetN(Tree_t* tree, size_t* p, char* s)
@@ -111,5 +115,23 @@ Node_t* GetN(Tree_t* tree, size_t* p, char* s)
         SyntaxError(*p, s);
     }
 
-    return CreateNode(tree, val, NUM, NULL, NULL);
+    return _NUM(val);
+}
+
+Node_t* GetV(Tree_t* tree, size_t* p, char* s)
+{
+    ON_DEBUG(printf("GetN : s[p] = %c\n", s[*p]);)
+    
+    if ('x' <= s[*p] && s[*p] <= 'z')
+    {
+        int var = s[*p];
+        (*p)++;
+        return _VAR(var);
+    }
+    else
+    {
+        SyntaxError(*p, s);
+    }
+
+    return 0;
 }

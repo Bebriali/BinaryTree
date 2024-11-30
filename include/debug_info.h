@@ -1,7 +1,7 @@
 #ifndef DEBUG_INFO_H
 #define DEBUG_INFO_H
 
-//#define DEBUG
+#define DEBUG
 
     #ifdef DEBUG
         #define ON_DEBUG(arg) arg

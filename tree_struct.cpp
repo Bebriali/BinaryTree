@@ -10,6 +10,9 @@ void TreeCtor (Tree_t* tree)
 {
     tree->root = NULL;
 
+    tree->log = NULL;
+    tree->dump_num = 0;
+
     tree->size = 0;
 }
 
