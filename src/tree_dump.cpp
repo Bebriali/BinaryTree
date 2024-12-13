@@ -9,11 +9,13 @@
 
 const int SYS_COM_SIZE = 40;
 
-ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
-                    const char* file, const char* func, const int line)
+ErrorKeys CreateLog(Tree_t* tree, const char* file, const char* func, const int line)
 {
-    assert(tree.root);
-    size_t dump_number = (dump_num) ? *dump_num : 0;
+    assert(tree);
+
+    size_t dump_number = tree->dump_num;
+    FILE* log = tree->log;
+
     if (log)
     {
         fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
@@ -53,12 +55,12 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
     fprintf(tree_dump, "digraph TREE\n");
     fprintf(tree_dump, "{\t");
     fprintf(tree_dump, "rankdir = TB\n\t");
-    fprintf(tree_dump, "node[color = \"black\", fontsize = 10];\n\t");
+    fprintf(tree_dump, "node[fontsize = 25, shape = Mrecord];\n\t");
     fprintf(tree_dump, "edge[color = \"#0AF2C8\", fontcolor = \"white\", fontsize = 5];\n\t");
 
     size_t rank = 1;
-    FormObjects(tree.root, tree_dump, rank);
-    ShapeTree(tree.root, tree_dump);
+    FormObjects(tree->root, tree_dump, rank);
+    ShapeTree(tree->root, tree_dump);
 
     fprintf(tree_dump, "}");
 
@@ -71,29 +73,60 @@ ErrorKeys CreateLog(Tree_t tree, FILE* log, size_t* dump_num, \
     ON_DEBUG(int system_code =) system(system_command);
     ON_DEBUG(printf("system_code = %d\n", system_code);)
 
-    if (dump_num) (*dump_num)++;
+    (tree->dump_num)++;
     return NO_ERRORS;
 }
 
 void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 {
-    fprintf(tree_dump, "x%p [shape = record, label = \"{ ptr:x%p | ", node, node);
+    fprintf(tree_dump, "x%p [", node);
+
+    if (node->type == OP)
+        {
+            switch(node->data.op)
+            {
+                case ADD:
+                    fprintf(tree_dump, "style = filled, color = \"#e86464\", fontcolor = black, ");
+                    break;
+                case SUB:
+                    fprintf(tree_dump, "style = filled, color = blue, fontcolor = \"#0af3f7\", ");
+                    break;
+                case MUL:
+                    fprintf(tree_dump, "style = filled, color = \"#de90dd\", fontcolor = black, ");
+                    break;
+                case DIV:
+                    fprintf(tree_dump, "style = filled, color = \"#d170db\", fontcolor = black, ");
+                    break;
+                case POW:
+                case SIN:
+                case COS:
+                case TAN:
+                case CTG:
+                case LOG:
+                case ERR:
+                default:
+                    break;
+            }
+        }
+
+    fprintf(tree_dump, "label = \"{ ptr:x%p | ", node);
 
     if (node->type == VAR)
     {
-        fprintf(tree_dump, "data:%c", node->data);
+        fprintf(tree_dump, "data:%c", node->data.var);
     }
     else if (node->type == NUM)
     {
-        fprintf(tree_dump, "data:%d ", node->data);
+        fprintf(tree_dump, "data:%d ", node->data.num);
     }
-    else if (node->type == OPN)
+    else if (node->type == OP)
     {
-        fprintf(tree_dump, "data:%s ", DefineOperation(node->data));
+        fprintf(tree_dump, "data:%s ", DecryptOperation(node->data.op));
     }
 
-    fprintf(tree_dump, "| { <left0>x%p | <right0>x%p }}\"];\n\t", \
+    fprintf(tree_dump, "| { <left0>x%p | <right0>x%p }", \
                     node->left, node->right);
+    fprintf(tree_dump, "}\"];\n\t");
 
     if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
     if(node->right) FormObjects(node->right, tree_dump, rank + 1);

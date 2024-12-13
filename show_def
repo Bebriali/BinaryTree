@@ -31,7 +31,7 @@ enum NodeType
 {
     NUM = 0,
     VAR = 1,
-    OPN = 2
+    OP = 2
 };
 
 struct Variable
@@ -77,7 +77,7 @@ void NodeDtor(Node_t** node);
 Node_t* Insert (Tree_t* tree, Node_t* node, int value, NodeType type);
 void Print(Node_t* node);
 
-const char* DefineOperation(int operation);
+const char* DecryptOperation(int operation);
 # 5 "include/differentiator.h" 2
 # 15 "include/differentiator.h"
 Node_t* Diff(Tree_t* tree, Node_t* node);
@@ -88,24 +88,24 @@ Node_t* Diff(Tree_t* tree, Node_t* node)
 {
     if (node->type == NUM) return CreateNode(tree, 0, NUM, NULL, NULL);
     if (node->type == VAR) return CreateNode(tree, 1, NUM, NULL, NULL);
-    if (node->type == OPN)
+    if (node->type == OP)
     {
         switch(node->data)
         {
             case ADD:
-                return CreateNode(tree, ADD, OPN, Diff(tree, node->left), Diff(tree, node->right));
+                return CreateNode(tree, ADD, OP, Diff(tree, node->left), Diff(tree, node->right));
             case SUB:
-                return CreateNode(tree, SUB, OPN, Diff(tree, node->left), Diff(tree, node->right));
+                return CreateNode(tree, SUB, OP, Diff(tree, node->left), Diff(tree, node->right));
             case MUL:
-                return CreateNode(tree, ADD, OPN, CreateNode(tree, MUL, OPN, Diff(tree, node->left), Copy(tree, node->right)), CreateNode(tree, MUL, OPN, Copy(tree, node->left), Diff(tree, node->right)))
+                return CreateNode(tree, ADD, OP, CreateNode(tree, MUL, OP, Diff(tree, node->left), Copy(tree, node->right)), CreateNode(tree, MUL, OP, Copy(tree, node->left), Diff(tree, node->right)))
                                                                                   ;
             case DIV:
-                return CreateNode(tree, DIV, OPN, CreateNode(tree, SUB, OPN, CreateNode(tree, MUL, OPN, Diff(tree, node->left), Copy(tree, node->right)),
-                                                                                CreateNode(tree, MUL, OPN, Copy(tree, node->left), Diff(tree, node->right))),
-                                                    CreateNode(tree, MUL, OPN, Copy(tree, node->right), Copy(tree, node->right)));
+                return CreateNode(tree, DIV, OP, CreateNode(tree, SUB, OP, CreateNode(tree, MUL, OP, Diff(tree, node->left), Copy(tree, node->right)),
+                                                                                CreateNode(tree, MUL, OP, Copy(tree, node->left), Diff(tree, node->right))),
+                                                    CreateNode(tree, MUL, OP, Copy(tree, node->right), Copy(tree, node->right)));
             default:
                 printf("\x1b[31m" "undefined differential of function or wrong type of operation : " "\x1b[0m");
-                printf("%s\n", DefineOperation(node->data));
+                printf("%s\n", DecryptOperation(node->data));
                 return NULL;
         }
     }

@@ -110,7 +110,7 @@ void GetNodeData(char* command, int* value, NodeType* type)
 
     else if (isalpha(command[0]))
     {
-        *type = OPN;
+        *type = OP;
         if (strcmp(command, "sin") == 0)
         {
             *value = SIN;
@@ -134,7 +134,7 @@ void GetNodeData(char* command, int* value, NodeType* type)
     }
     else
     {
-        *type = OPN;
+        *type = OP;
         if (strcmp(command, "+")    == 0)
         {
             *value = ADD;

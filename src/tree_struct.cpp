@@ -1,17 +1,18 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "color.h"
 #include "debug_info.h"
 #include "tree_struct.h"
 
-void TreeCtor (Tree_t* tree)
+void TreeCtor (Tree_t* tree, FILE* log)
 {
     tree->root = NULL;
 
-    tree->log = NULL;
-    tree->dump_num = 0;
+    tree->log = log;
+    tree->dump_num = (size_t) tree;
 
     tree->size = 0;
 }
@@ -36,7 +37,24 @@ Node_t* CreateNode(Tree_t* tree, int value, NodeType type, Node_t* left, Node_t*
     }
 
     node->type = type;
-    node->data = value;
+
+    switch(node->type)
+    {
+        case OP:
+            node->data.op = (Operation) value;
+            break;
+        case VAR:
+            node->data.var = (char) value;
+            break;
+        case NUM:
+            node->data.num = (int) value;
+            break;
+        case FLT:
+            node->data.flt = (double) value;
+        default:
+            break;
+    }
+
     node->left = left;
     node->right = right;
 
@@ -64,7 +82,7 @@ Node_t* Insert(Tree_t* tree, Node_t* node, int value, NodeType type)
         return CreateNode(tree, value, type, NULL, NULL);
     }
 
-    if (node->data > value)
+    if (node->data.num > value)
     {
         node->right = Insert(tree, node->right, value, type);
     }
@@ -88,17 +106,19 @@ void Print(Node_t* node)
     switch(node->type)
     {
         case NUM:
-            printf("%d", node->data);
+            printf("%d", node->data.num);
             break;
-        case OPN:
-            printf("%s", DefineOperation(node->data));
+        case FLT:
+            printf("%lg", node->data.flt);
+        case OP:
+            printf("%s", DecryptOperation(node->data.op));
             break;
         case VAR:
             //PrintVariable(node->data);
-            printf("x");
+            printf("%c", node->data.var);
             break;
         default:
-            printf(RED("\nno such operand : %d\n"), node->data);
+            printf(RED("\nno such operand : %d\n"), node->data.num);
             return ;
             break;
     }
@@ -116,7 +136,7 @@ void Print(Node_t* node)
     printf(")");
 }
 
-const char* DefineOperation(int operation)
+const char* DecryptOperation(int operation)
 {
     switch(operation)
     {
@@ -128,6 +148,8 @@ const char* DefineOperation(int operation)
             return "/";
         case MUL:
             return "*";
+        case POW:
+            return "^";
         case SIN:
             return "sin";
         case COS:
@@ -145,18 +167,46 @@ const char* DefineOperation(int operation)
     return NULL;
 }
 
-
-#ifdef TRY_THIS_CODE_
-void PrintVariable(int variable)
+Operation DefineOperation(const char* opn)
 {
-    for (size_t i = 0; i < ..._size; i++)
+    if (strcmp("+", opn) == 0)
     {
-        if (.... == variable)
-        {
-            printf("%c", ...var);
-        }
+        return ADD;
+    }
+    else if (strcmp("-", opn) == 0)
+    {
+        return SUB;
+    }
+    else if (strcmp("*", opn) == 0)
+    {
+        return MUL;
+    }
+    else if (strcmp("/", opn) == 0)
+    {
+        return DIV;
+    }
+    else if (strcmp("sin", opn) == 0)
+    {
+        return SIN;
+    }
+    else if (strcmp("cos", opn) == 0)
+    {
+        return COS;
+    }
+    else if (strcmp("tan", opn) == 0)
+    {
+        return TAN;
+    }
+    else if (strcmp("ctg", opn) == 0)
+    {
+        return CTG;
+    }
+    else if (strcmp("log", opn) == 0)
+    {
+        return LOG;
+    }
+    else
+    {
+        return ERR;
     }
 }
-#endif
-
-
