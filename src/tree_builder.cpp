@@ -11,222 +11,267 @@
                                        assert(arg2); \
                                        assert(arg3);
 
-void SyntaxError(size_t p, char* s)
+void SyntaxError(size_t p, Tokens* command, const char* error_text)
 {
     printf(RED("error in syntax\n\t"));
-    printf("%s\n\t", s);
+
+    printf("current ptr = %d\n\t", p);
+
+    DumpToken(command);
+
     for (size_t i = 0; i < p; i++)
     {
-        printf(" ");
+        printf("%9s", "");
     }
-    printf("^\n\t");
+    printf(RED("^\n"));
     for (size_t i = 0; i < p; i++)
     {
-        printf(" ");
+        printf("%9s", "");
     }
-    printf("|\n");
+    printf(RED("|\n"));
+
+    printf(RED("%s\n"), error_text);
 
     assert(0);
 }
 
-Node_t* GetG(Tree_t* tree, size_t* p, char* s)
+Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
+
+    ON_DEBUG(printf("GetAssignment : p = %d\n", *p);)
+
+    Node_t* val1 = GetVariable(tree, p, command);
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != AST)
+        SyntaxError(*p, command, "expected assignment ('=')");
+
+    size_t assign_ptr = *p;
+
+    Node_t* val2 = GetAddSub(tree, p, command);
+
+    command->tokens[assign_ptr]->left = val1;
+    command->tokens[assign_ptr]->right = val2;
+    ON_DEBUG(printf("val2 = %p\n", val2);)
+
+    if (val2 == command->tokens[assign_ptr])
+    {
+        printf(RED("ADDR_PTR_FAULT\n"));
+        return NULL;
+    }
+
+    return command->tokens[assign_ptr];
+}
+
+Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
+{
+    ASSERT_BUILD(tree, p, command);
 
     ON_DEBUG(printf("GetG : p = %d\n", *p);)
 
 
-    Node_t* val = GetE(tree, p, s);
-
-    if (s[*p] != '$')
-        SyntaxError(*p, s);
+    Node_t* val = GetAssignment(tree, p, command);
+    while (command->tokens[*p]->type == OP && command->tokens[*p]->data.op == SEM && command->tokens[*p + 1]->data.op != EOT)
+    {
+        if (command->tokens[*p]->data.op != SEM)
+        {
+            SyntaxError(*p, command, "expected semicolon (';')");
+        }
+        else
+        {
+            (*p)++;
+            ON_DEBUG(printf("getting new assignment\n");)
+            Node_t* val2 = GetAssignment(tree, p, command);
+            if (val2 == NULL)
+            {
+                return NULL;
+            }
+            val = _SEM(val, val2);
+        }
+    }
     (*p)++;
 
+    ON_DEBUG(printf("all assignments have gotten\n");)
+
+    if (command->tokens[*p]->data.op != EOT)
+        SyntaxError(*p, command, "expected End Of Translation ('$')");
+    (*p)++;
+
+    ON_DEBUG(printf("val addr = %p\n", val);)
+
     return val;
 }
 
-Node_t* GetE(Tree_t* tree, size_t* p, char* s)
+Node_t* GetAddSub(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetE : p = %d\n", *p);)
+    ON_DEBUG(printf("GetAddSub : p = %d\n", *p);)
 
 
-    Node_t* val = GetT(tree, p, s);
+    Node_t* val = GetMulDiv(tree, p, command);
 
-    while (s[*p] == '+' || s[*p] == '-')
+    while (command->tokens[*p]->type == OP && (command->tokens[*p]->data.op == ADD || command->tokens[*p]->data.op == SUB))
     {
-        int op = s[*p];
+        Operation op = command->tokens[*p]->data.op;
         (*p)++;
 
-        Node_t* val_extra = GetT(tree, p, s);
+        Node_t* val_extra = GetMulDiv(tree, p, command);
 
-        if (op == '+') val = _ADD(val, val_extra);
-        if (op == '-') val = _SUB(val, val_extra);
+        if (op == ADD) val = _ADD(val, val_extra);
+        if (op == SUB) val = _SUB(val, val_extra);
     }
 
     return val;
 }
 
-Node_t* GetT(Tree_t* tree, size_t* p, char* s)
+Node_t* GetMulDiv(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetT : p = %d\n", *p);)
+    ON_DEBUG(printf("GetMulDiv : p = %d\n", *p);)
 
 
-    Node_t* val = GetD(tree, p, s);
+    Node_t* val = GetPow(tree, p, command);
 
-    while (s[*p] == '*' || s[*p] == '/')
+    while (command->tokens[*p]->type == OP && (command->tokens[*p]->data.op == DIV || command->tokens[*p]->data.op == MUL))
     {
-        int op = s[*p];
+        Operation op = command->tokens[*p]->data.op;
 
         (*p)++;
 
-        Node_t* val_extra = GetD(tree, p, s);
+        Node_t* val_extra = GetPow(tree, p, command);
 
-        if (op == '*') val = _MUL(val, val_extra);
-        if (op == '/') val = _DIV(val, val_extra);
+        if (op == MUL) val = _MUL(val, val_extra);
+        if (op == DIV) val = _DIV(val, val_extra);
     }
 
     return val;
 }
 
-Node_t* GetP(Tree_t* tree, size_t* p, char* s)
+Node_t* GetPrExp(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetP : p = %d\n", *p);)
+    ON_DEBUG(printf("GetPrExp : p = %d\n", *p);)
 
 
-    if (s[*p] == '(')
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op == L_PR_EXP)
     {
         (*p)++;
-        Node_t* val = GetE(tree, p, s);
-
-        if (s[*p] != ')')
-            SyntaxError(*p, s);
+        Node_t* val = GetAddSub(tree, p, command);
+        ON_DEBUG(printf("\tp after GetAddSub = %d\n", *p);)
+        if (command->tokens[*p]->type != OP || (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != R_PR_EXP))
+            SyntaxError(*p, command, "expected operation (')')");
         (*p)++;
 
         return val;
     }
     else
     {
-        if (isdigit(s[*p]))
+        if (command->tokens[*p]->type == NUM)
         {
-            return GetN(tree, p, s);
+            return GetNumber(tree, p, command);
         }
         else
         {
-            return GetV(tree, p, s);
+            return GetVariable(tree, p, command);
         }
     }
 }
 
-Node_t* GetO(Tree_t* tree, size_t* p, char* s)
+Node_t* GetOperation(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetO : p = %d\n", *p);)
+    ON_DEBUG(printf("GetOperation : p = %d\n", *p);)
 
-
-    int old_p = *p;
-    char opn[4];
-    size_t opn_p = 0;
-    while (isalpha(s[*p + opn_p]))
+    if (command->tokens[*p]->type == OP)
     {
-        opn[opn_p] = s[*p + opn_p];
-        opn_p++;
-    }
-    opn[opn_p] = '\0';
-    ON_DEBUG(printf(BLUE("operation = %s\n"), opn);)
+        if (command->tokens[*p]->data.op == L_PR_EXP)
+        {
+            ON_DEBUG(printf("\tp in GetOperation = %d\n", *p);)
+            return GetPrExp(tree, p, command);
+        }
+        else
+        {
+            ON_DEBUG(printf(GREEN("detected operation : %d = %s\n"), command->tokens[*p]->data.op, DecryptOperation(command->tokens[*p]->data.op));)
 
-    Operation type = DefineOperation(opn);
-    if (ERR == type)
+            (*p)++;
+            size_t cur_op_ptr = *p - 1;
+            command->tokens[cur_op_ptr]->left = GetPrExp(tree, p, command);
+            return command->tokens[cur_op_ptr];
+        }
+    }
+    else
     {
-        return GetP(tree, p, s);
+        return GetPrExp(tree, p, command);
     }
-
-    *p += opn_p;
-
-    if (s[*p] != '(')
-    {
-        SyntaxError(*p, s);
-    }
-
-    return CreateNode(tree, type, OP, GetP(tree, p, s), NULL);
 }
 
-Node_t* GetD(Tree_t* tree, size_t* p, char* s)
+Node_t* GetPow(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetD : p = %d\n", *p);)
+    ON_DEBUG(printf("GetPow : p = %d\n", *p);)
 
 
-    Node_t* base = GetO(tree, p, s);
-    if (s[*p] != '^')
+    Node_t* base = GetOperation(tree, p, command);
+    ON_DEBUG(printf("p after GetOperation = %d\n", *p);)
+
+    if (command->tokens[*p]->type != OP || (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != POW))
     {
+        ON_DEBUG(printf("returning base\n");)
         return base;
     }
+    size_t pow_ptr = *p;
     (*p)++;
 
-    Node_t* degree = GetO(tree, p, s);
+    Node_t* degree = GetOperation(tree, p, command);
+    command->tokens[pow_ptr]->left = base;
+    command->tokens[pow_ptr]->right = degree;
+
     if (degree == NULL)
     {
-        SyntaxError(*p, s);
+        SyntaxError(*p, command, "pow operator has no right operand ('smth^nullptr')");
         return NULL;
     }
     else
     {
-        return _POW(base, degree);
+        return command->tokens[pow_ptr];
     }
 }
 
-Node_t* GetN(Tree_t* tree, size_t* p, char* s)
+Node_t* GetNumber(Tree_t* tree, size_t* p, Tokens* command)
 {
-    ASSERT_BUILD(tree, p, s);
+    ASSERT_BUILD(tree, p, command);
 
-    ON_DEBUG(printf("GetN : p = %d\n", *p);)
+    ON_DEBUG(printf("GetNumber : p = %d\n", *p);)
 
-
-    int val = 0;
-    size_t old_p = *p;
-    while ('0' <= s[*p] && s[*p] <= '9')
+    if (command->tokens[*p]->type == NUM)
     {
-        val = val * 10 + s[*p] - '0';
-        (*p)++;
-    }
-
-    ON_DEBUG(printf(MAGENTA("val = %d\n"), val);)
-    ON_DEBUG(printf("old p = %d\n", old_p);)
-
-    if (*p == old_p)
-    {
-        SyntaxError(*p, s);
-    }
-
-    return _NUM(val);
-}
-
-Node_t* GetV(Tree_t* tree, size_t* p, char* s)
-{
-    ASSERT_BUILD(tree, p, s);
-
-    ON_DEBUG(printf("GetV : s[p] = %c\n", s[*p]);)
-    ON_DEBUG(printf("GetV : p = %d\n", *p);)
-
-    printf("string = %s\n", s);
-
-    if ('x' <= s[*p] && s[*p] <= 'z')
-    {
-        int var = s[*p];
-        (*p)++;
-        return _VAR(var);
+        return command->tokens[(*p)++];
     }
     else
     {
-        SyntaxError(*p, s);
+        SyntaxError(*p, command, "token is not a number");
+        return NULL;
+    }
+}
+
+Node_t* GetVariable(Tree_t* tree, size_t* p, Tokens* command)
+{
+    ASSERT_BUILD(tree, p, command);
+
+    ON_DEBUG(printf("GetVariable : p = %d\n", *p);)
+
+    if (command->tokens[*p]->type == VAR)
+    {
+        (*p)++;
+        return command->tokens[*p - 1];
+    }
+    else
+    {
+        SyntaxError(*p, command, "token is not a variable");
     }
 
     return 0;

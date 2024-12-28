@@ -79,6 +79,11 @@ ErrorKeys CreateLog(Tree_t* tree, const char* file, const char* func, const int 
 
 void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 {
+    ON_DEBUG(for (size_t i = 0; i < rank; i++))
+    ON_DEBUG({)
+    ON_DEBUG(    printf(" ");)
+    ON_DEBUG(})
+    ON_DEBUG(printf("node_addr = %p\n", node);)
     fprintf(tree_dump, "x%p [", node);
 
     if (node->type == OP)
@@ -103,6 +108,9 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
                 case TAN:
                 case CTG:
                 case LOG:
+                case R_PR_EXP:
+                case L_PR_EXP:
+                case EOT:
                 case ERR:
                 default:
                     break;
@@ -113,7 +121,7 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 
     if (node->type == VAR)
     {
-        fprintf(tree_dump, "data:%c", node->data.var);
+        fprintf(tree_dump, "data:%s", node->data.var);
     }
     else if (node->type == NUM)
     {

@@ -10,6 +10,6 @@ void GenInsert(Tree_t* tree);
 Node_t* ReadInfInsert(Node_t* node);
 
 Node_t* ReadInsert(Tree_t* tree, Node_t* node);
-void GetNodeData(char* command, int* value, NodeType* type);
+union Data GetNodeData(char* command, void* value, NodeType* type);
 
 #endif

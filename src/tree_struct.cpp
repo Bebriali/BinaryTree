@@ -6,6 +6,7 @@
 #include "color.h"
 #include "debug_info.h"
 #include "tree_struct.h"
+#include "differentiator.h"
 
 void TreeCtor (Tree_t* tree, FILE* log)
 {
@@ -27,7 +28,7 @@ ErrorKeys TreeDtor(Tree_t* tree)
     return NO_ERRORS;
 }
 
-Node_t* CreateNode(Tree_t* tree, int value, NodeType type, Node_t* left, Node_t* right)
+Node_t* CreateNode(Tree_t* tree, Data value, NodeType type, Node_t* left, Node_t* right)
 {
     Node_t* node = (Node_t*)calloc(1, sizeof(Node_t));
     if(node == NULL)
@@ -41,16 +42,18 @@ Node_t* CreateNode(Tree_t* tree, int value, NodeType type, Node_t* left, Node_t*
     switch(node->type)
     {
         case OP:
-            node->data.op = (Operation) value;
+            node->data = value;
             break;
         case VAR:
-            node->data.var = (char) value;
+            node->data = value;
+            //sscanf(value.var, "%s", node->data.var);
             break;
         case NUM:
-            node->data.num = (int) value;
+            node->data = value;
             break;
         case FLT:
-            node->data.flt = (double) value;
+            node->data = value;
+        case ERR_T:
         default:
             break;
     }
@@ -79,7 +82,7 @@ Node_t* Insert(Tree_t* tree, Node_t* node, int value, NodeType type)
 {
     if (node == NULL)
     {
-        return CreateNode(tree, value, type, NULL, NULL);
+        return CreateNode(tree, IntToData(value), type, NULL, NULL);
     }
 
     if (node->data.num > value)
@@ -115,8 +118,9 @@ void Print(Node_t* node)
             break;
         case VAR:
             //PrintVariable(node->data);
-            printf("%c", node->data.var);
+            printf("%s", node->data.var);
             break;
+        case ERR_T:
         default:
             printf(RED("\nno such operand : %d\n"), node->data.num);
             return ;
@@ -136,7 +140,28 @@ void Print(Node_t* node)
     printf(")");
 }
 
-const char* DecryptOperation(int operation)
+const char* DecryptType(NodeType type)
+{
+    switch(type)
+    {
+        case NUM:
+            return "num";
+        case VAR:
+            return "var";
+        case  OP:
+            return "op";
+        case FLT:
+            return "flt";
+        case ERR_T:
+            return "err";
+        default:
+            return "err";
+    }
+
+    return NULL;
+}
+
+const char* DecryptOperation(Operation operation)
 {
     switch(operation)
     {
@@ -160,6 +185,17 @@ const char* DecryptOperation(int operation)
             return "ctg";
         case LOG:
             return "log";
+        case R_PR_EXP:
+            return ")";
+        case L_PR_EXP:
+            return "(";
+        case EOT:
+            return "$";
+        case SEM:
+            return ";";
+        case AST:
+            return "=";
+        case ERR:
         default:
             return "NO SUCH OPERAND";
     }
@@ -185,6 +221,10 @@ Operation DefineOperation(const char* opn)
     {
         return DIV;
     }
+    else if (strcmp("^", opn) == 0)
+    {
+        return POW;
+    }
     else if (strcmp("sin", opn) == 0)
     {
         return SIN;
@@ -205,8 +245,30 @@ Operation DefineOperation(const char* opn)
     {
         return LOG;
     }
+    else if (strcmp("$", opn) == 0)
+    {
+        return EOT;
+    }
+    else if (strcmp("(", opn) == 0)
+    {
+        return L_PR_EXP;
+    }
+    else if (strcmp(")", opn) == 0)
+    {
+        return R_PR_EXP;
+    }
+    else if (strcmp("=", opn) == 0)
+    {
+        return AST;
+    }
+    else if (strcmp(";", opn) == 0)
+    {
+        return SEM;
+    }
     else
     {
         return ERR;
     }
 }
+
+

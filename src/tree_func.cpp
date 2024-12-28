@@ -73,17 +73,17 @@ Node_t* ReadInsert(Tree_t* tree, Node_t* node)
     printf(GREEN("scanned command is %s\n"), s);
 
     int value = 0;
-    NodeType type;
-    GetNodeData(s, &value, &type);
+    NodeType type = ERR_T;
+    Data data = GetNodeData(s, &value, &type);
 
     if (!node)
     {
-        node = CreateNode(tree, value, type, NULL, NULL);
+        node = CreateNode(tree, data, type, NULL, NULL);
         printf(MAGENTA("created node = %p\n"), node);
     }
     else if (!node->left)
     {
-        node->left = CreateNode(tree, value, type, NULL, NULL);
+        node->left = CreateNode(tree, data, type, NULL, NULL);
 
         ON_DEBUG(Print(node); printf("\n");)
 
@@ -91,7 +91,7 @@ Node_t* ReadInsert(Tree_t* tree, Node_t* node)
     }
     else if (!node->right)
     {
-        node->right = CreateNode(tree, value, type, NULL, NULL);
+        node->right = CreateNode(tree, data, type, NULL, NULL);
 
         ON_DEBUG(Print(node); printf("\n");)
 
@@ -100,12 +100,14 @@ Node_t* ReadInsert(Tree_t* tree, Node_t* node)
     return ReadInsert(tree, node);
 }
 
-void GetNodeData(char* command, int* value, NodeType* type)
+union Data GetNodeData(char* command, void* value, NodeType* type)
 {
     if (isdigit(command[0]))
     {
         *type = NUM;
-        *value = atoi(command);
+        *(int*) value = atoi(command);
+        Data data = {.num = *(int*) value};
+        return data;
     }
 
     else if (isalpha(command[0]))
@@ -113,43 +115,47 @@ void GetNodeData(char* command, int* value, NodeType* type)
         *type = OP;
         if (strcmp(command, "sin") == 0)
         {
-            *value = SIN;
+            *(Operation*) value = SIN;
         }
         else if (strcmp(command, "cos") == 0)
         {
-            *value = COS;
+            *(Operation*) value = COS;
         }
         else if (strcmp(command, "tan") == 0)
         {
-            *value = TAN;
+            *(Operation*) value = TAN;
         }
         else if (strcmp(command, "ctg") == 0)
         {
-            *value = CTG;
+            *(Operation*) value = CTG;
         }
         else if (strcmp(command, "log") == 0)
         {
-            *value = CTG;
+            *(Operation*) value = CTG;
         }
+        Data data = {.op = *(Operation*) value};
+        return data;
     }
     else
     {
         *type = OP;
         if (strcmp(command, "+")    == 0)
         {
-            *value = ADD;
+            *(Operation*) value = ADD;
         }
         else if (strcmp(command, "*") == 0)
         {
-            *value = MUL;
+            *(Operation*) value = MUL;
         }
         else if (strcmp(command, "-") == 0)
         {
-            *value = SUB;
+            *(Operation*) value = SUB;
         }
         else if (strcmp(command, "/") == 0)
         {
-            *value = DIV;
+            *(Operation*) value = DIV;
         }
+        Data data = {.op = *(Operation*) value};
+        return data;
     }
 }

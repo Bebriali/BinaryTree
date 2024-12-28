@@ -1,10 +1,12 @@
-//#include "TxLib.h"
+#include "TxLib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #include "color.h"
+#include "debug_info.h"
 #include "differentiator.h"
+#include "lexical_analysis.h"
 #include "tree_builder.h"
 #include "tree_dump.h"
 #include "tree_func.h"
@@ -62,17 +64,31 @@ void BuildTree(Tree_t* tree, char* logfile)
     size_t p = 0;
     char s[MAX_LEN_EXAMPLE];
     printf("enter the sum : \n");
-    scanf("%s", s);
+    gets(s);
 
     printf("read string = %s\n", s);
 
-    tree->root = GetG(tree, &p, s);
+    Tokens* command = Tokenize(s, &p);
+
+    DumpToken(command);
+
+    p = 0;
+    tree->root = GetG(tree, &p, command);
+    if (tree->root == NULL)
+    {
+        //free_all();
+        return ;
+    }
+
+    ON_DEBUG(printf("tree->root addr = %p\n", tree->root);)
+    ON_DEBUG(printf("tree->right = %p / tree->left = %p\n", tree->root->right, tree->root->left);)
 
     TREE_DUMP(tree);
 
     fprintf(log, "</pre>\n");
     fclose(log);
 }
+/*
 
 void HardCodeInput(Tree_t my_tree, char* logfile)
 {
@@ -115,3 +131,4 @@ void TestInput(Tree_t my_tree, char* logfile)
     fprintf(log, "</pre>\n");
     fclose(log);
 }
+*/
