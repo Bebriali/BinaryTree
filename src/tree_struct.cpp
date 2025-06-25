@@ -195,6 +195,22 @@ const char* DecryptOperation(Operation operation)
             return ";";
         case AST:
             return "=";
+        case IF:
+            return "if";
+        case WHILE:
+            return "while";
+        case R_CURL:
+            return "}";
+        case L_CURL:
+            return "{";
+        case MORE:
+            return ">";
+        case LESS:
+            return "<";
+        case EQ:
+            return "==";
+        case UN_EQ:
+            return "!=";
         case ERR:
         default:
             return "NO SUCH OPERAND";
@@ -257,9 +273,49 @@ Operation DefineOperation(const char* opn)
     {
         return R_PR_EXP;
     }
+    else if (strcmp("{", opn) == 0)
+    {
+        return L_CURL;
+    }
+    else if (strcmp("}", opn) == 0)
+    {
+        return R_CURL;
+    }
     else if (strcmp("=", opn) == 0)
     {
         return AST;
+    }
+    else if (strcmp("if", opn) == 0)
+    {
+        return IF;
+    }
+    else if (strcmp("while", opn) == 0)
+    {
+        return WHILE;
+    }
+    else if (strcmp(">", opn) == 0)
+    {
+        return MORE;
+    }
+    else if (strcmp("<", opn) == 0)
+    {
+        return LESS;
+    }
+    else if (strcmp("==", opn) == 0)
+    {
+        return EQ;
+    }
+    else if (strcmp("!=", opn) == 0)
+    {
+        return NOT_EQ;
+    }
+    else if (strcmp("<=", opn) == 0)
+    {
+        return BTM_EQ;
+    }
+    else if (strcmp(">=", opn) == 0)
+    {
+        return TOP_EQ;
     }
     else if (strcmp(";", opn) == 0)
     {
@@ -269,6 +325,11 @@ Operation DefineOperation(const char* opn)
     {
         return ERR;
     }
+}
+
+bool ComparativeOperation(Operation op)
+{
+    return op == LESS || op == MORE || op == EQ || op == NOT_EQ || op == BTM_EQ || op == TOP_EQ;
 }
 
 

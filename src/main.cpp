@@ -33,20 +33,21 @@ int main(int argc, char* argv[])
 
     BuildTree(&my_tree, argv[1]);
     TREE_DUMP(&my_tree);
-
+/*
     Tree_t diff_tree = {};
     TreeCtor(&diff_tree, log);
     diff_tree.root = Diff(&my_tree, my_tree.root);
     TREE_DUMP(&diff_tree);
 
-    Tree_t simp_diff = {};
-    TreeCtor(&simp_diff, log);
-    simp_diff.root = Simplify(&diff_tree, diff_tree.root);
-    TREE_DUMP(&simp_diff);
+    TreeDtor(&diff_tree);
+*/
 
+    Tree_t simp_tree = {};
+    TreeCtor(&simp_tree, log);
+    simp_tree.root = Simplify(&my_tree, my_tree.root);
+    TREE_DUMP(&simp_tree);
 
     TreeDtor(&my_tree);
-    TreeDtor(&diff_tree);
 
 
     fprintf(log, "</pre>\n");

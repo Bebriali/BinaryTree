@@ -79,6 +79,9 @@ ErrorKeys CreateLog(Tree_t* tree, const char* file, const char* func, const int 
 
 void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 {
+    assert(node);
+    assert(tree_dump);
+
     ON_DEBUG(for (size_t i = 0; i < rank; i++))
     ON_DEBUG({)
     ON_DEBUG(    printf(" ");)

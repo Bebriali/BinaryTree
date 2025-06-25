@@ -1,6 +1,7 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+#include <time.h>
 
 #include "color.h"
 #include "debug_info.h"
@@ -66,20 +67,38 @@ Node_t* GetToken(char* line, size_t* ptr)
 
     ON_DEBUG(printf(GREEN("getting token :\n\t"));)
 
+    const char litera[2] = {line[*ptr], '\0'};
+    const char bi_litera[3] = {line[*ptr], line[*ptr + 1], '\0'};
+    Operation single_op = DefineOperation(litera);
+    Operation bi_op = DefineOperation(bi_litera);
+
     if (isdigit(line[*ptr]))
     {
-        int number = GetNumber(line, ptr);\
+        int number = GetNumber(line, ptr);
         ON_DEBUG(printf("gotten number : %d\n", number);)
         Node_t* node = NULL;
         _NUM(node, number);
         return node;
     }
-    else if (isalpha(line[*ptr]))
+    else if (single_op != ERR && bi_op == ERR)
+    {
+        Node_t* node = NULL;
+        ON_DEBUG(printf("character is operation : %d = %s\n", single_op, DecryptOperation(single_op));)
+        _OP(node, single_op);
+        *ptr += 1;
+        return node;
+    }
+    else if (!isspace(line[*ptr]))
     {
         char* character = GetCharacter(line, ptr);
         ON_DEBUG(printf("gotten character : %s\n\t", character));
+<<<<<<< HEAD:src/lexical_analysis.cpp
         Operation op = {};
         if ((op = DefineOperation(character)) != ERR)
+=======
+        Operation op = DefineOperation(character);
+        if (op != ERR)
+>>>>>>> ee12b536079a33c0439fea72f14cf939651b4707:src/tokenizer.cpp
         {
             Node_t* node = NULL;
             ON_DEBUG(printf("character is operation : %d = %s\n", op, DecryptOperation(op));)
@@ -113,19 +132,43 @@ Node_t* GetToken(char* line, size_t* ptr)
             return NULL;
         }
     }
-
-
-    return NULL;
 }
 
 int GetNumber(char* line, size_t* ptr)
 {
+                                                            // getting number before point
     int number = 0;
     while (isdigit(line[*ptr]))
     {
+        if (line[*ptr] == '.')
+        {
+            (*ptr)++;
+            break;
+        }
         number = number * 10 + line[*ptr] - '0';
         (*ptr)++;
     }
+
+/*  this part should not work on integers (which are to change to double)
+                                                            // getting decimal part of number
+    int dec_count = 0;
+    while (isdigit(line[*ptr]))
+    {
+        if (line[*ptr] == '.')
+        {
+            return NULL;
+        }
+
+        number = number * 10 + line[*ptr] - '0';
+        (*ptr)++;
+        dec_count++;
+    }
+                                                            // converting to the right point positon
+    for (int i = 0; i < dec_count; i++)
+    {
+        number /= 10;
+    }
+*/
 
     return number;
 }
@@ -142,7 +185,7 @@ char* GetCharacter(char* line, size_t* ptr)
 
     size_t char_ip = 0;
 
-    while (isalpha(line[*ptr]))
+    while (isalpha(line[(*ptr)]))
     {
         if (char_ip >= char_size)
         {
@@ -157,10 +200,28 @@ char* GetCharacter(char* line, size_t* ptr)
         }
         character[char_ip++] = line[(*ptr)++];
     }
-    if ((line[*ptr] == '(' || line[*ptr] == ')') && char_ip == 0)
+    if (char_ip != 0)
     {
+        character[char_ip] = '\0';
+        return character;
+    }
+
+    while (!isspace(line[(*ptr)]) && !isalpha(line[(*ptr)]))
+    {
+        if (char_ip >= char_size)
+        {
+            char_size *= MUL_SIZE;
+            char* t = (char*) realloc(character, char_size);
+            if (t == NULL)
+            {
+                printf(RED("error in callocation:") "file : %s, func : %s\n", __FILE__, __func__);
+                return NULL;
+            }
+            character = t;
+        }
         character[char_ip++] = line[(*ptr)++];
     }
+
     character[char_ip] = '\0';
 
     return character;
@@ -224,6 +285,14 @@ void DumpToken(Tokens* tokens)
 
 void DumpNode(Node_t* node)
 {
+    time_t timer;
+    char buffer[26];
+    struct tm* tm_info;
+    timer = time(NULL);
+    tm_info = localtime(&timer);
+    strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", tm_info);
+    puts(buffer);
+    printf("time: %s, node: %p\n", buffer, node);
     return ;
 }
 
