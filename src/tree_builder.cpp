@@ -35,6 +35,86 @@ void SyntaxError(size_t p, Tokens* command, const char* error_text)
     assert(0);
 }
 
+Node_t* GetOperator(Tree_t* tree, size_t* p, Tokens* command)
+{
+    ASSERT_BUILD(tree, p, command);
+
+    ON_DEBUG(printf("GetOperator : p = %d\n", *p);)
+
+    Node_t* Operator = GetConditional(tree, p, command);
+
+    if (Operator == NULL)
+    {
+        ON_DEBUG(printf("no condition such as 'if' 'while'\n");)
+        Operator = GetAssignment(tree, p, command);
+    }
+
+    while (command->tokens[*p]->type != OP && command->tokens[*p]->data.op != EOT)
+    {
+        Node_t* Operator2 = GetConditional(tree, p, command);
+        if (Operator2 == NULL)
+        {
+            Operator2 = GetAssignment(tree, p, command);
+        }
+
+        Operator = _SEM(Operator, Operator2);
+    }
+
+    return Operator;
+}
+
+Node_t* GetConditional(Tree_t* tree, size_t* p, Tokens* command)
+{
+    ASSERT_BUILD(tree, p, command);
+
+    ON_DEBUG(printf("GetConditional : p = %d\n", *p);)
+
+    if ((command->tokens[*p]->type == OP && command->tokens[*p]->data.op != IF && command->tokens[*p]->data.op != WHILE) || command->tokens[*p]->type != OP)
+    {
+        return NULL;
+    }
+    size_t if_token = *p;
+    (*p)++;
+
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != L_PR_EXP)
+    {
+        SyntaxError(*p, command, "expected left primary expression ('(')");
+    }
+    (*p)++;
+
+    Node_t* condition = GetLogicalExpr(tree, p, command);
+    ON_DEBUG(printf("after GetLogicalExpr : p = %d\n", *p);)
+    if (condition == NULL)
+    {
+        SyntaxError(*p, command, "expected condition");
+    }
+
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != R_PR_EXP)
+    {
+        SyntaxError(*p, command, "expected right primary expression (')')");
+    }
+    (*p)++;
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != L_CURL)
+    {
+        SyntaxError(*p, command, "expected left curly brace ('{')");
+    }
+    (*p)++;
+
+    Node_t* directive = GetOperator(tree, p, command);
+
+    if (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != R_CURL)
+    {
+        SyntaxError(*p, command, "expected right curly brace ('}')");
+    }
+    (*p)++;
+
+    command->tokens[if_token]->left  = condition;
+    command->tokens[if_token]->right = directive;
+
+    return command->tokens[if_token];
+}
+
+
 Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
 {
     ASSERT_BUILD(tree, p, command);
@@ -46,6 +126,7 @@ Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
         SyntaxError(*p, command, "expected assignment ('=')");
 
     size_t assign_ptr = *p;
+    (*p)++;
 
     Node_t* val2 = GetAddSub(tree, p, command);
 
@@ -59,7 +140,48 @@ Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
         return NULL;
     }
 
+    if (command->tokens[*p]->type != OP || (command->tokens[*p]->type == OP && command->tokens[*p]->data.op != SEM))
+    {
+        SyntaxError(*p, command, "expected semicolon (';')");
+    }
+    (*p)++;
+
     return command->tokens[assign_ptr];
+}
+
+Node_t* GetLogicalExpr(Tree_t* tree, size_t* p, Tokens* command)
+{
+    Node_t* expr_one = GetAddSub(tree, p, command);
+    ON_DEBUG(printf("after first GetAddSub : p = %d\n", *p);)
+
+    if (command->tokens[*p]->type != OP)
+    {
+        SyntaxError(*p, command, "expected comparative operator / right primary expression");
+    }
+
+    if (command->tokens[*p]->data.op == R_PR_EXP)
+    {
+        return expr_one;
+    }
+
+    // if (command->tokens[*p]->data.op == LESS || command->tokens[*p]->data.op == MORE || command->tokens[*p]->data.op == EQ || command->tokens[*p]->data.op == UN_EQ)
+    if (ComparativeOperation(command->tokens[*p]->data.op))
+    {
+        size_t comparative_ptr = *p;
+        (*p)++;
+
+        Node_t* expr_sec = GetAddSub(tree, p, command);
+        ON_DEBUG(printf("after _ GetAddSub : p = %d\n", *p);)
+
+        command->tokens[comparative_ptr]->right = expr_sec;
+        command->tokens[comparative_ptr]->left  = expr_one;
+
+        return command->tokens[comparative_ptr];
+    }
+
+    SyntaxError(*p, command, "");
+
+    return NULL;
 }
 
 Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
@@ -69,7 +191,7 @@ Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
     ON_DEBUG(printf("GetG : p = %d\n", *p);)
 
 
-    Node_t* val = GetAssignment(tree, p, command);
+    Node_t* val = GetOperator(tree, p, command);
     while (command->tokens[*p]->type == OP && command->tokens[*p]->data.op == SEM && command->tokens[*p + 1]->data.op != EOT)
     {
         if (command->tokens[*p]->data.op != SEM)
@@ -80,7 +202,7 @@ Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
         {
             (*p)++;
             ON_DEBUG(printf("getting new assignment\n");)
-            Node_t* val2 = GetAssignment(tree, p, command);
+            Node_t* val2 = GetOperator(tree, p, command);
             if (val2 == NULL)
             {
                 return NULL;
@@ -109,6 +231,7 @@ Node_t* GetAddSub(Tree_t* tree, size_t* p, Tokens* command)
 
 
     Node_t* val = GetMulDiv(tree, p, command);
+    ON_DEBUG(printf("after GetMulDiv: p = %d\n", *p);)
 
     while (command->tokens[*p]->type == OP && (command->tokens[*p]->data.op == ADD || command->tokens[*p]->data.op == SUB))
     {
@@ -132,6 +255,7 @@ Node_t* GetMulDiv(Tree_t* tree, size_t* p, Tokens* command)
 
 
     Node_t* val = GetPow(tree, p, command);
+    ON_DEBUG(printf("after GetPow : p = %d\n", *p););
 
     while (command->tokens[*p]->type == OP && (command->tokens[*p]->data.op == DIV || command->tokens[*p]->data.op == MUL))
     {

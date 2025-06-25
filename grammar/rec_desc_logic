@@ -1,13 +1,14 @@
-General     ::= Operator '$'
-Operator    ::= {{Assignment | If | While} ';'}+
-Assignment  ::= Variable '=' AddSub
-If          ::= 'if' '(' LogicalExpr ')' '{' Operator '}'
-While       ::= 'while' '(' LogicalExpr ')' '{' Operator '}'
-LogicalExpr ::= AddSub {['<', '>', '==', '!='] AddSub}
-AddSub      ::= MulDiv {['+', '-'] MulDiv}*
-MulDiv      ::= Pow {['*', '/'] Pow}*
-Operation   ::= {'log' | .... | 'sin'} '(' AddSub ')'
-Pow         ::= PrimaryExpr {['^'] PrimaryExpr}*
-PrimaryExpr ::= '(' AddSub ')' | Variable | Number
-Number      ::= ['0'-'9']+
-Value       ::= ['a'-'z']+
+<General>     ::= <Operator> "$"
+<Operator>    ::= <Assignment> | <If> | <While> ";"
+<Assignment>  ::= <Variable> "=" <AddSub> ";"
+<If>          ::= "if" "(" <LogicalExpr> ")" "{" <Operator> "}" (";" "else" "{" <Operator> "}")*
+<While>       ::= "while" "(" <LogicalExpr> ")" "{" <Operator> "}"
+<For>         ::= "for" "(" <Variable> ";" <LogiclaExpr> ";" <Operation> ")" "{" <Operator> "}"
+<LogicalExpr> ::= <AddSub> (("<" | ">" | "==" | "!=") <AddSub>)*
+<AddSub>      ::= <MulDiv> (("+" | "-") <MulDiv>)*
+<MulDiv>      ::= <Pow> (("*" | "/") <Pow>)*
+<Operation>   ::= ("log" | ... | "sin") "(" <AddSub> ")"
+<Pow>         ::= <PrimaryExpr> ("^" <PrimaryExpr>)*
+<PrimaryExpr> ::= "(" <AddSub> ")" | <Variable> | <Number>
+<Number>      ::= ["0"-"9"]+ ("." [0-9]+)*
+<Value>       ::= ["a"-"z"]+ ([0-9]+)*

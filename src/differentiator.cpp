@@ -92,8 +92,20 @@ Node_t* Diff(Tree_t* tree, Node_t* node)
                 return _DIV(DiffLeft, CopyLeft);
                 break;
             case R_PR_EXP:
+                return CopyNode;
+                break;
             case L_PR_EXP:
+                return CopyNode;
+                break;
+            case AST:
+                return CopyNode;
+                break;
+            case SEM:
+                return CopyNode;
+                break;
             case EOT:
+                return CopyNode;
+                break;
             case ERR:
             default:
                 printf(RED("undefined differential of function or wrong type of operation : "));
