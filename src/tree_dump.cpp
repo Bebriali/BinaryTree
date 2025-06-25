@@ -86,7 +86,7 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
     ON_DEBUG(printf("node_addr = %p\n", node);)
     fprintf(tree_dump, "x%p [", node);
 
-    if (node->type == OP)
+    if (node && node->type == OP)
         {
             switch(node->data.op)
             {
@@ -119,29 +119,34 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
 
     fprintf(tree_dump, "label = \"{ ptr:x%p | ", node);
 
-    if (node->type == VAR)
+    if (node && node->type == VAR)
     {
         fprintf(tree_dump, "data:%s", node->data.var);
     }
-    else if (node->type == NUM)
+    else if (node && node->type == NUM)
     {
         fprintf(tree_dump, "data:%d ", node->data.num);
     }
-    else if (node->type == OP)
+    else if (node && node->type == OP)
     {
         fprintf(tree_dump, "data:%s ", DecryptOperation(node->data.op));
     }
 
-    fprintf(tree_dump, "| { <left0>x%p | <right0>x%p }", \
-                    node->left, node->right);
-    fprintf(tree_dump, "}\"];\n\t");
+    if (node)
+    {
+        fprintf(tree_dump, "| { <left0>x%p | <right0>x%p }", \
+                        node->left, node->right);
+        fprintf(tree_dump, "}\"];\n\t");
+    }
 
-    if(node->left)  FormObjects(node->left,  tree_dump, rank + 1);
-    if(node->right) FormObjects(node->right, tree_dump, rank + 1);
+    if(node && node->left)  FormObjects(node->left,  tree_dump, rank + 1);
+    if(node && node->right) FormObjects(node->right, tree_dump, rank + 1);
 }
 
 void ShapeTree(Node_t* node, FILE* tree_dump)
 {
+    if (node == NULL)
+        return ;
     if (node->left)  fprintf(tree_dump, "x%p:<left0> -> x%p;\n\t", node, node->left);
     if (node->right) fprintf(tree_dump, "x%p:<right0> -> x%p;\n\t", node, node->right);
 

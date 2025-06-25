@@ -10,8 +10,14 @@
 Tokens* TokensCtor(void)
 {
     Tokens* cur_tokens = (Tokens*) calloc(1, sizeof(Tokens));
-    cur_tokens->tokens = (Node_t**) calloc(MAX_TOKEN_SIZE, sizeof(Node_t*));
     if (cur_tokens == NULL)
+    {
+        printf(RED("error in callocation:") "file : %s, func : %s\n", __FILE__, __func__);
+        return NULL;
+    }
+
+    cur_tokens->tokens = (Node_t**) calloc(MAX_TOKEN_SIZE, sizeof(Node_t*));
+    if (cur_tokens->tokens == NULL)
     {
         printf(RED("error in callocation:") "file : %s, func : %s\n", __FILE__, __func__);
         return NULL;
@@ -26,6 +32,11 @@ Tokens* TokensCtor(void)
 Tokens* Tokenize(char* line, size_t* ptr)
 {
     Tokens* command = TokensCtor();
+    if (command == NULL)
+    {
+        printf(RED("error in TokensCtor:") "file : %s, func : %s\n", __FILE__, __func__);
+        return NULL;
+    }
 
     while(true)
     {
@@ -40,7 +51,7 @@ Tokens* Tokenize(char* line, size_t* ptr)
         }
         else
         {
-            printf("getting token...\n");
+            // printf("getting token...\n");
             command->tokens[command->length++] = GetToken(line, ptr);
             printf("current tokens_ptr = %d\n", command->length);
         }
@@ -67,7 +78,7 @@ Node_t* GetToken(char* line, size_t* ptr)
     {
         char* character = GetCharacter(line, ptr);
         ON_DEBUG(printf("gotten character : %s\n\t", character));
-        Operation op;
+        Operation op = {};
         if ((op = DefineOperation(character)) != ERR)
         {
             Node_t* node = NULL;
