@@ -2,7 +2,7 @@
 #define TREE_BUILDER_H
 
 #include "tree_struct.h"
-#include "lexical_analysis.h"
+#include "tokenizer.h"
 
 void SyntaxError(size_t p, Tokens* command, const char* error_text);
 

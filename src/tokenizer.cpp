@@ -6,7 +6,7 @@
 #include "color.h"
 #include "debug_info.h"
 #include "differentiator.h"
-#include "lexical_analysis.h"
+#include "tokenizer.h"
 
 Tokens* TokensCtor(void)
 {
@@ -92,13 +92,8 @@ Node_t* GetToken(char* line, size_t* ptr)
     {
         char* character = GetCharacter(line, ptr);
         ON_DEBUG(printf("gotten character : %s\n\t", character));
-<<<<<<< HEAD:src/lexical_analysis.cpp
-        Operation op = {};
-        if ((op = DefineOperation(character)) != ERR)
-=======
         Operation op = DefineOperation(character);
         if (op != ERR)
->>>>>>> ee12b536079a33c0439fea72f14cf939651b4707:src/tokenizer.cpp
         {
             Node_t* node = NULL;
             ON_DEBUG(printf("character is operation : %d = %s\n", op, DecryptOperation(op));)
@@ -292,7 +287,7 @@ void DumpNode(Node_t* node)
     tm_info = localtime(&timer);
     strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", tm_info);
     puts(buffer);
-    printf("time: %s, node: %p\n", buffer, node);
+    printf("time: %s, node: %p\n, node_type: %d, node_data: %s\n", buffer, node, node->type, node->data);
     return ;
 }
 

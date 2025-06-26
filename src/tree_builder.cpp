@@ -201,14 +201,8 @@ Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
 
     ON_DEBUG(printf("GetG : p = %d\n", *p);)
 
-<<<<<<< HEAD
-                                                            // getting first assignment
-    Node_t* val = GetAssignment(tree, p, command);
-                                                            // getting new assignment if there is no '$' after ';'
-=======
 
     Node_t* val = GetOperator(tree, p, command);
->>>>>>> ee12b536079a33c0439fea72f14cf939651b4707
     while (command->tokens[*p]->type == OP && command->tokens[*p]->data.op == SEM && command->tokens[*p + 1]->data.op != EOT)
     {
         if (command->tokens[*p]->data.op != SEM)
@@ -219,12 +213,7 @@ Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
         {
             (*p)++;
             ON_DEBUG(printf("getting new assignment\n");)
-<<<<<<< HEAD
-                                                            // getting assignment
-            Node_t* val2 = GetAssignment(tree, p, command);
-=======
             Node_t* val2 = GetOperator(tree, p, command);
->>>>>>> ee12b536079a33c0439fea72f14cf939651b4707
             if (val2 == NULL)
             {
                 return NULL;

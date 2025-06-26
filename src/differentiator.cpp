@@ -1,6 +1,8 @@
-#include <stdio.h>
 #include <assert.h>
+#include <stdio.h>
+#include <string.h>
 #include <math.h>
+
 #include "color.h"
 #include "differentiator.h"
 
@@ -11,7 +13,11 @@ union Data IntToData(int arg)
 }
 union Data VarToData(char* arg)
 {
-    Data value = {.var = arg};
+    Data value = {.var = strdup(arg)};
+    if (value.var == NULL)
+    {
+        printf(RED("error in memory allocation for string in VarToData\n"));
+    }
     return value;
 }
 union Data FltToData(double arg)
@@ -89,23 +95,22 @@ Node_t* Diff(Tree_t* tree, Node_t* node)
                 break;
             }
             case LOG:
-                return _DIV(DiffLeft, CopyLeft);
-                break;
             case R_PR_EXP:
-                return CopyNode;
-                break;
             case L_PR_EXP:
-                return CopyNode;
-                break;
             case AST:
-                return CopyNode;
-                break;
             case SEM:
-                return CopyNode;
-                break;
             case EOT:
-                return CopyNode;
-                break;
+            case R_CURL:
+            case IF:
+            case WHILE:
+            case FOR:
+            case MORE:
+            case LESS:
+            case EQ:
+            case NOT_EQ:
+            case BTM_EQ:
+            case TOP_EQ:
+            case L_CURL:
             case ERR:
             default:
                 printf(RED("undefined differential of function or wrong type of operation : "));
@@ -194,6 +199,19 @@ Node_t* SimplifyOperation(Tree_t* tree, Node_t* node)
         case L_PR_EXP:
         case EOT:
         case ERR:
+        case R_CURL:
+        case L_CURL:
+        case AST:
+        case IF:
+        case WHILE:
+        case FOR:
+        case MORE:
+        case LESS:
+        case EQ:
+        case NOT_EQ:
+        case BTM_EQ:
+        case TOP_EQ:
+        case SEM:
         default:
         {
             return Copy(tree, node);

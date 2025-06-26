@@ -113,6 +113,19 @@ void FormObjects(Node_t* node, FILE* tree_dump, size_t rank)
                 case LOG:
                 case R_PR_EXP:
                 case L_PR_EXP:
+                case R_CURL:
+                case L_CURL:
+                case AST:
+                case IF:
+                case WHILE:
+                case FOR:
+                case MORE:
+                case LESS:
+                case EQ:
+                case NOT_EQ:
+                case BTM_EQ:
+                case TOP_EQ:
+                case SEM:
                 case EOT:
                 case ERR:
                 default:

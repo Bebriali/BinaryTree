@@ -1,5 +1,5 @@
-#ifndef LEXICAL_ANALYSIS_H
-#define LEXICAL_ANALYSIS_H
+#ifndef TOKENIZER_H
+#define TOKENIZER_H
 
 #include "tree_struct.h"
 
@@ -10,8 +10,8 @@ enum CharParam
     MIN_SIZE = 10,
     MUL_SIZE = 2
 };
-
-typedef struct Tokens
+// it was typedef struct Tokens here
+typedef struct
 {
     Node_t** tokens;
     size_t length;

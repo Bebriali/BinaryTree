@@ -8,7 +8,7 @@
 #include "tree_struct.h"
 #include "differentiator.h"
 
-void TreeCtor (Tree_t* tree, FILE* log)
+void TreeCtor(Tree_t* tree, FILE* log)
 {
     tree->root = NULL;
 
@@ -113,6 +113,7 @@ void Print(Node_t* node)
             break;
         case FLT:
             printf("%lg", node->data.flt);
+            break;
         case OP:
             printf("%s", DecryptOperation(node->data.op));
             break;
@@ -199,6 +200,8 @@ const char* DecryptOperation(Operation operation)
             return "if";
         case WHILE:
             return "while";
+        case FOR:
+            return "for";
         case R_CURL:
             return "}";
         case L_CURL:
@@ -209,8 +212,12 @@ const char* DecryptOperation(Operation operation)
             return "<";
         case EQ:
             return "==";
-        case UN_EQ:
+        case NOT_EQ:
             return "!=";
+        case TOP_EQ:
+            return "more=";
+        case BTM_EQ:
+            return "less=";
         case ERR:
         default:
             return "NO SUCH OPERAND";

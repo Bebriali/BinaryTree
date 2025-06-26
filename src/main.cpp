@@ -1,15 +1,19 @@
 #include "TxLib.h"
+// #include "..\..\..\..\Users\1\Documents\TX\TXLib.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 #include "color.h"
 #include "debug_info.h"
 #include "differentiator.h"
-#include "lexical_analysis.h"
+#include "tokenizer.h"
 #include "tree_builder.h"
 #include "tree_dump.h"
 #include "tree_func.h"
+#include "tree_printer.h"
+#include "tree_reader.h"
 #include "tree_struct.h"
 
 const int MAX_LEN_EXAMPLE = 100;
@@ -32,7 +36,7 @@ int main(int argc, char* argv[])
     TreeCtor(&my_tree, log);
 
     BuildTree(&my_tree, argv[1]);
-    TREE_DUMP(&my_tree);
+    // TREE_DUMP(&my_tree);
 /*
     Tree_t diff_tree = {};
     TreeCtor(&diff_tree, log);
@@ -45,10 +49,16 @@ int main(int argc, char* argv[])
     Tree_t simp_tree = {};
     TreeCtor(&simp_tree, log);
     simp_tree.root = Simplify(&my_tree, my_tree.root);
-    TREE_DUMP(&simp_tree);
+    // TREE_DUMP(&simp_tree);
+    TreePrint(&simp_tree, "log/print_tree.txt");
+
+    ON_DEBUG(printf("reading tree...\n");)
+    Tree_t* read_tree = TreeRead("log/print_tree.txt");
+    ON_DEBUG(printf("dumping tree...\n");)
+    TREE_DUMP(read_tree);
 
     TreeDtor(&my_tree);
-
+    TreeDtor(read_tree);
 
     fprintf(log, "</pre>\n");
     fclose(log);
@@ -65,7 +75,24 @@ void BuildTree(Tree_t* tree, char* logfile)
     size_t p = 0;
     char s[MAX_LEN_EXAMPLE];
     printf("enter the sum : \n");
-    gets(s);
+
+    /* this function is not safe
+    gets(s); */
+
+                                                            // getting string
+    int c = 0;
+    while((c = getchar()) != EOF)
+    {
+        s[p] = (char) c;
+        ++p;
+
+        if (c == '$')
+        {
+            s[++p] = '\0';
+            break;
+        }
+    }
+    p = 0;
 
     printf("read string = %s\n", s);
 
@@ -84,7 +111,7 @@ void BuildTree(Tree_t* tree, char* logfile)
     ON_DEBUG(printf("tree->root addr = %p\n", tree->root);)
     ON_DEBUG(printf("tree->right = %p / tree->left = %p\n", tree->root->right, tree->root->left);)
 
-    TREE_DUMP(tree);
+    // TREE_DUMP(tree);
 
     fprintf(log, "</pre>\n");
     fclose(log);
