@@ -5,6 +5,7 @@
 #include "color.h"
 #include "debug_info.h"
 #include "differentiator.h"
+#include "tokenizer.h"
 #include "tree_builder.h"
 #include "tree_dump.h"
 
@@ -20,12 +21,15 @@ void SyntaxError(size_t p, Tokens* command, const char* error_text)
 
     DumpToken(command);
 
-    for (size_t i = 0; i < p; i++)
+    printf("%7s", "");
+    for (size_t i = 0; i < p % OUTPUT_WIDTH; i++)
     {
         printf("%9s", "");
     }
     printf(RED("^\n"));
-    for (size_t i = 0; i < p; i++)
+
+    printf("%7s", "");
+    for (size_t i = 0; i < p % OUTPUT_WIDTH; i++)
     {
         printf("%9s", "");
     }
@@ -50,12 +54,31 @@ Node_t* GetOperator(Tree_t* tree, size_t* p, Tokens* command)
         Operator = GetAssignment(tree, p, command);
     }
 
-    while (command->tokens[*p]->type != OP && command->tokens[*p]->data.op != EOT)
+    while (command->tokens[*p]->type != OP ||
+                (command->tokens[*p]->type == OP &&
+                    (command->tokens[*p]->data.op != EOT ||command->tokens[*p]->data.op == SEM)))
     {
+        (*p)++;
+
+                                                            // when if ends: 'if {...;...;};'
+                                                            //                            ^
+                                                            //                            |
+                                                            //                       here/
+                                                            // of EOT '$' comes
+        if (command->tokens[*p]->type == OP &&
+                (command->tokens[*p]->data.op == R_CURL || command->tokens[*p]->data.op == EOT))
+        {
+            break;
+        }
+
         Node_t* Operator2 = GetConditional(tree, p, command);
         if (Operator2 == NULL)
         {
             Operator2 = GetAssignment(tree, p, command);
+        }
+        else
+        {
+            ON_DEBUG(printf(RED("GetOperator: GetConditional returned not NULL\n"));)
         }
 
         Operator = _SEM(Operator, Operator2);
@@ -133,7 +156,7 @@ Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
 
     command->tokens[assign_ptr]->left = val1;
     command->tokens[assign_ptr]->right = val2;
-    ON_DEBUG(printf("val2 = %p\n", val2);)
+    ON_DEBUG(printf("GetAssignment : val2 = %p\n", val2);)
 
                                                             // checking if cycle in tree
     if (val1 == command->tokens[assign_ptr] ||
@@ -155,7 +178,7 @@ Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
     {
         SyntaxError(*p, command, "expected semicolon (';')");
     }
-    (*p)++;
+    // (*p)++;
 
     return command->tokens[assign_ptr];
 }
@@ -163,7 +186,7 @@ Node_t* GetAssignment(Tree_t* tree, size_t* p, Tokens* command)
 Node_t* GetLogicalExpr(Tree_t* tree, size_t* p, Tokens* command)
 {
     Node_t* expr_one = GetAddSub(tree, p, command);
-    ON_DEBUG(printf("after first GetAddSub : p = %d\n", *p);)
+    ON_DEBUG(printf("GetLogicalExpr : after first GetAddSub : p = %d\n", *p);)
 
     if (command->tokens[*p]->type != OP)
     {
@@ -203,8 +226,10 @@ Node_t* GetG(Tree_t* tree, size_t* p, Tokens* command)
 
 
     Node_t* val = GetOperator(tree, p, command);
+    ON_DEBUG(printf(RED("current token number is %d\n"), *p);)
     while (command->tokens[*p]->type == OP && command->tokens[*p]->data.op == SEM && command->tokens[*p + 1]->data.op != EOT)
     {
+            printf(RED("IDIOT"));
         if (command->tokens[*p]->data.op != SEM)
         {
             SyntaxError(*p, command, "expected semicolon (';')");

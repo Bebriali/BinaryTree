@@ -8,6 +8,78 @@
 #include "tree_struct.h"
 #include "differentiator.h"
 
+name_t** NT_Ctor(void)
+{
+    name_t** name_table = (name_t**) calloc(MAX_VAR_NUM, sizeof(name_t*));
+    if (name_table == NULL)
+    {
+        printf(RED("error in memory allocation for name_table in NT_Ctor\n"));
+        return NULL;
+    }
+
+    for (int i = 0; i < MAX_VAR_NUM; i++)
+    {
+        name_table[i] = (name_t*) calloc(1, sizeof(name_t));
+        if (name_table[i] == NULL)
+        {
+            printf(RED("error in memory allocation for name_table[%d] in NT_Ctor\n"), i);
+            return NULL;
+        }
+
+        name_table[i]->offset = 1;
+        name_table[i]->reg    = ERR_REG;
+    }
+
+    return name_table;
+}
+
+void NT_Dtor(name_t** name_table)
+{
+    for (int i = 0; i < MAX_VAR_NUM; i++)
+    {
+        if (name_table[i] != NULL)
+        {
+            free(name_table[i]);
+            name_table[i] = NULL;
+        }
+    }
+
+    if (name_table != NULL)
+    {
+        free(name_table);
+        name_table = NULL;
+    }
+
+    return ;
+}
+int NT_FindElem(name_t** name_table, char* elem)
+{
+    for (int i = 0; i < MAX_VAR_NUM; i++)
+    {
+        if (!strcmp(elem, name_table[i]->name))
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+void NT_PutElem(name_t** name_table, char* elem)
+{
+    for (int i = 0; i < MAX_VAR_NUM; i++)
+    {
+        if (name_table[i]->offset == 1 && name_table[i]->reg == ERR_REG && name_table[i]->name[0] == '\0')
+        {
+            name_table[i]->offset = -1 * i * sizeof(int);
+            strcpy(name_table[i]->name, elem);
+            break;
+        }
+    }
+
+    return ;
+}
+
 void TreeCtor(Tree_t* tree, FILE* log)
 {
     tree->root = NULL;
@@ -16,6 +88,8 @@ void TreeCtor(Tree_t* tree, FILE* log)
     tree->dump_num = (size_t) tree;
 
     tree->size = 0;
+
+    tree->name_table = NT_Ctor();
 }
 
 ErrorKeys TreeDtor(Tree_t* tree)
@@ -23,6 +97,7 @@ ErrorKeys TreeDtor(Tree_t* tree)
     if (tree == NULL)
         return PTR_ERROR;
 
+    NT_Dtor(tree->name_table);
     NodeDtor(&tree->root);
 
     return NO_ERRORS;
@@ -38,28 +113,39 @@ Node_t* CreateNode(Tree_t* tree, Data value, NodeType type, Node_t* left, Node_t
     }
 
     node->type = type;
-
     switch(node->type)
     {
         case OP:
-            node->data = value;
-            break;
         case VAR:
-            node->data = value;
-            //sscanf(value.var, "%s", node->data.var);
-            break;
         case NUM:
-            node->data = value;
-            break;
         case FLT:
             node->data = value;
+            break;
         case ERR_T:
         default:
+            printf(RED("error type of operation : cannot create node\n"));
+            return NULL;
             break;
     }
 
     node->left = left;
     node->right = right;
+
+    /* tree always sends as nullptr
+                                                            // increasing tree->size value
+    if (left != NULL && right != NULL)
+    {
+        tree->size += 3;
+    }
+    else if (left != NULL || right != NULL)
+    {
+        tree->size += 2;
+    }
+    else
+    {
+        tree->size += 1;
+    }
+    */
 
     return node;
 }
@@ -207,17 +293,17 @@ const char* DecryptOperation(Operation operation)
         case L_CURL:
             return "{";
         case MORE:
-            return ">";
+            return "\\";
         case LESS:
-            return "<";
+            return "/";
         case EQ:
             return "==";
         case NOT_EQ:
             return "!=";
         case TOP_EQ:
-            return "more=";
+            return "\\=";
         case BTM_EQ:
-            return "less=";
+            return "/=";
         case ERR:
         default:
             return "NO SUCH OPERAND";
@@ -300,11 +386,11 @@ Operation DefineOperation(const char* opn)
     {
         return WHILE;
     }
-    else if (strcmp(">", opn) == 0)
+    else if (strcmp("\\", opn) == 0)
     {
         return MORE;
     }
-    else if (strcmp("<", opn) == 0)
+    else if (strcmp("/", opn) == 0)
     {
         return LESS;
     }
@@ -316,11 +402,11 @@ Operation DefineOperation(const char* opn)
     {
         return NOT_EQ;
     }
-    else if (strcmp("<=", opn) == 0)
+    else if (strcmp("/=", opn) == 0)
     {
         return BTM_EQ;
     }
-    else if (strcmp(">=", opn) == 0)
+    else if (strcmp("\\=", opn) == 0)
     {
         return TOP_EQ;
     }

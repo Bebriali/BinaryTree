@@ -1,5 +1,5 @@
 #include "TxLib.h"
-// #include "..\..\..\..\Users\1\Documents\TX\TXLib.h"
+// #include "../../../../../../Documents/TX/TXLib.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,7 +21,7 @@ const int MAX_LEN_EXAMPLE = 100;
 void TestInput(Tree_t tree, char* logfile);
 void HardCodeInput(Tree_t tree, char* logfile);
 
-void BuildTree(Tree_t* tree, char* logfile);
+void BuildTree(Tree_t* tree, FILE* log);
 
 void Calculate(void);
 
@@ -31,33 +31,37 @@ int main(int argc, char* argv[])
     FILE* log = fopen(logfile, "wb");
     fprintf(log, "<pre>\n");
 
+    if (argc <= 1 || (argc > 1 && strcmp(argv[1], "--use-dump-tree")))
+    {
+        Tree_t my_tree = {};
+        TreeCtor(&my_tree, log);
 
-    Tree_t my_tree = {};
-    TreeCtor(&my_tree, log);
+        BuildTree(&my_tree, log);
+        // TREE_DUMP(&my_tree);
+    /*
+        Tree_t diff_tree = {};
+        TreeCtor(&diff_tree, log);
+        diff_tree.root = Diff(&my_tree, my_tree.root);
+        TREE_DUMP(&diff_tree);
 
-    BuildTree(&my_tree, argv[1]);
-    // TREE_DUMP(&my_tree);
-/*
-    Tree_t diff_tree = {};
-    TreeCtor(&diff_tree, log);
-    diff_tree.root = Diff(&my_tree, my_tree.root);
-    TREE_DUMP(&diff_tree);
+        TreeDtor(&diff_tree);
+    */
 
-    TreeDtor(&diff_tree);
-*/
-
-    Tree_t simp_tree = {};
-    TreeCtor(&simp_tree, log);
-    simp_tree.root = Simplify(&my_tree, my_tree.root);
-    // TREE_DUMP(&simp_tree);
-    TreePrint(&simp_tree, "log/print_tree.txt");
+        printf("filename = %s ; log = %p\n", logfile, log);
+        Tree_t simp_tree = {};
+        TreeCtor(&simp_tree, log);
+        simp_tree.root = Simplify(&my_tree, my_tree.root);
+        // TREE_DUMP(&simp_tree);
+        TreePrint(&simp_tree, "log/print_tree.txt");
+        TreeDtor(&my_tree);
+        TreeDtor(&simp_tree);
+    }
 
     ON_DEBUG(printf("reading tree...\n");)
-    Tree_t* read_tree = TreeRead("log/print_tree.txt");
+    Tree_t* read_tree = TreeRead("log/print_tree.txt", NULL);
     ON_DEBUG(printf("dumping tree...\n");)
     TREE_DUMP(read_tree);
 
-    TreeDtor(&my_tree);
     TreeDtor(read_tree);
 
     fprintf(log, "</pre>\n");
@@ -66,11 +70,10 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-void BuildTree(Tree_t* tree, char* logfile)
+void BuildTree(Tree_t* tree, FILE* log)
 {
-    size_t dump_num = 0;
-    FILE* log = fopen(logfile, "wb");
-    fprintf(log, "<pre>\n");
+    // FILE* log = fopen(logfile, "wb");
+    // fprintf(log, "<pre>\n");
 
     size_t p = 0;
     char s[MAX_LEN_EXAMPLE];
@@ -113,8 +116,8 @@ void BuildTree(Tree_t* tree, char* logfile)
 
     // TREE_DUMP(tree);
 
-    fprintf(log, "</pre>\n");
-    fclose(log);
+    // fprintf(log, "</pre>\n");
+    // fclose(log);
 }
 /*
 

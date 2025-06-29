@@ -14,12 +14,6 @@ enum NodeType
     ERR_T = 4
 };
 
-struct Variable
-{
-    char var;
-    int var_code;
-};
-
 enum Operation
 {
     ADD      = 0,   // +
@@ -51,6 +45,32 @@ enum Operation
     ERR      = 26   //
 };
 
+typedef enum Registers
+{
+    RAX,
+    RBX,
+    RCX,
+    RDX,
+    RSI,
+    RDI,
+    R8,
+    R9,
+    R10,
+    R11,
+    R12,
+    R13,
+    R14,
+    R15,
+    ERR_REG
+} regs_t;
+
+typedef struct NameTable
+{
+    regs_t reg;
+    int offset;
+    char name[32] = {0};
+} name_t;
+
 union Data
 {
     int num;
@@ -73,8 +93,14 @@ struct Tree_t
     size_t size;
     FILE* log;
     size_t dump_num;
-    Variable var_list[MAX_VAR_NUM];
+
+    name_t** name_table;
 };
+
+name_t** NT_Ctor(void);
+void NT_Dtor(name_t** name_table);
+int NT_FindElem(name_t** name_table, char* elem);
+void NT_PutElem(name_t** name_table, char* elem);
 
 void TreeCtor(Tree_t* tree, FILE* log);
 ErrorKeys TreeDtor(Tree_t* tree);

@@ -11,7 +11,7 @@
 #include "tree_reader.h"
 #include "tree_struct.h"
 
-Tree_t* TreeRead(const char* filename)
+Tree_t* TreeRead(const char* filename, FILE* log)
 {
     FILE* dump = fopen(filename, "rb");
     if (dump == NULL)
@@ -45,11 +45,11 @@ Tree_t* TreeRead(const char* filename)
         printf(RED("error in memory allocation for tree\n"));
         return NULL;
     }
-    TreeCtor(tree, NULL);
+    TreeCtor(tree, log);
 
     printf("tree is callocated\n");
     tree->root = ReadNode(dump);
-    printf("the tree is gotten: %x\n", tree);
+    printf("the tree is gotten: %p\n", tree);
 
     fclose(dump);
 
@@ -62,7 +62,7 @@ Node_t* ReadNode(FILE* dump)
 
     char str[10] = "";
     long pos = ftell(dump);
-    printf("pos before checking str way is %d\n", pos);
+    printf("pos before checking str way is %ld\n", pos);
     fscanf(dump, "%s", str);
     printf("checked str way : '%s'\n", str);
 
@@ -76,9 +76,6 @@ Node_t* ReadNode(FILE* dump)
         return NULL;
     }
 
-
-    char line[256] = "";
-
     pos = ftell(dump);
     printf("file position before fscanf = %ld\n", pos);
 
@@ -86,9 +83,10 @@ Node_t* ReadNode(FILE* dump)
     char type[32] = "";
     char data[64] = "";
 
-    int c = 0;
+    // it was int c = 0; here
+    char c = 0;
     fscanf(dump, "%c", &c);
-    while (c == (int)'\t')
+    while (c == '\t')
     {
         pos++;
         fscanf(dump, "%c", &c);
@@ -106,7 +104,7 @@ Node_t* ReadNode(FILE* dump)
     char str5[32] = "";
 
     pos = ftell(dump);
-    printf("position before reading nxt string is %d\n", pos);
+    printf("position before reading nxt string is %ld\n", pos);
     sscanf_scs = fscanf(dump, "%s%s%s%s%s", str1, str2, str3, str4, str5);
     printf("fscanf has read '%s' '%s' '%s' '%s' '%s'\n", str1, str2, str3, str4, str5);
     fseek(dump, pos, SEEK_SET);
@@ -116,37 +114,31 @@ Node_t* ReadNode(FILE* dump)
         return NULL;
     };
 
-    Data decrypt_data;
-    enum NodeType decrypt_type = ERR_T;
     Node_t* node = NULL;
 
     if (!strcmp(type, "VAR"))
     {
-        decrypt_type     = VAR;
-        decrypt_data.var = data;
-
-        node             = _VAR(node, data);
+        /*node             = */_VAR(node, data);
     }
     else if (!strcmp(type, "OP"))
     {
-        decrypt_type         = OP;
         Operation defined_op = DefineOperation(data);
-        node                 = _OP(node, defined_op);
+
+        /*node                 = */_OP(node, defined_op);
     }
     else if (!strcmp(type, "NUM"))
     {
-        decrypt_type    = NUM;
         size_t pointer  = 0;
         int defined_num = GetNumber(data, &pointer);
-        node            = _NUM(node, defined_num);
+
+        /*node            = */_NUM(node, defined_num);
     }
     else
     {
-        decrypt_type = ERR_T;
         printf(RED("error in tree_reading: undefined operation - %s\n"), type);
     }
 
-    printf(BLUE("node read addr = %x\n"), node);
+    printf(BLUE("node read addr = %p\n"), node);
     if (node == NULL)
     {
         printf(RED("no node created\n"));

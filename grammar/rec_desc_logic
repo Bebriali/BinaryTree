@@ -1,6 +1,6 @@
 <General>     ::= <Operator> "$"
 <Operator>    ::= <Assignment> | <If> | <While> ";"
-<Assignment>  ::= <Variable> "=" <AddSub> ";"
+<Assignment>  ::= <Variable> "=" <AddSub>
 <If>          ::= "if" "(" <LogicalExpr> ")" "{" <Operator> "}" (";" "else" "{" <Operator> "}")*
 <While>       ::= "while" "(" <LogicalExpr> ")" "{" <Operator> "}"
 <For>         ::= "for" "(" <Variable> ";" <LogiclaExpr> ";" <Operation> ")" "{" <Operator> "}"

@@ -316,7 +316,7 @@ Node_t* PowSimp(Tree_t* tree, Node_t* node)
     {
         if ((node->left)->type == NUM)
         {
-            _NUM(node, pow((node->left)->data.num, (node->right)->data.num));
+            _NUM(node, (int) pow((node->left)->data.num, (node->right)->data.num));
             return node;
         }
         else if ((node->right)->data.num == 1)

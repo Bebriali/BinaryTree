@@ -3,7 +3,8 @@
 
 #include "tree_struct.h"
 
-const int MAX_TOKEN_SIZE = 100;
+const int MAX_TOKEN_SIZE  = 100;
+const size_t OUTPUT_WIDTH =  13;
 
 enum CharParam
 {

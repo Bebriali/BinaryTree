@@ -54,7 +54,7 @@ Tokens* Tokenize(char* line, size_t* ptr)
         {
             // printf("getting token...\n");
             command->tokens[command->length++] = GetToken(line, ptr);
-            printf("current tokens_ptr = %d\n", command->length);
+            printf("current tokens_ptr = %ld\n", command->length);
         }
     }
     return command;
@@ -105,6 +105,7 @@ Node_t* GetToken(char* line, size_t* ptr)
             Node_t* node = NULL;
             ON_DEBUG(printf("character is variable\n");)
             _VAR(node, character);
+            printf("lox\n");
             return node;
         }
     }
@@ -229,52 +230,56 @@ void SkipSpace(char* s, size_t* ptr)
 
 void DumpToken(Tokens* tokens)
 {
-    printf("tokens quantity = %d\n", tokens->length);
-    for (size_t i = 0; i < tokens->length; i++)
-    {
-        printf("token %2d ", i);
-    }
-    printf("\n");
+    printf("tokens quantity = %ld\n", tokens->length);
 
-    for (size_t i = 0; i < tokens->length; i++)
+    for (size_t k = 0; k < tokens->length / OUTPUT_WIDTH + 1; k++)
     {
-        if (tokens->tokens[i] == NULL)
+        for (size_t i = k * OUTPUT_WIDTH; i < tokens->length && i < k * OUTPUT_WIDTH + OUTPUT_WIDTH; i++)
         {
-            printf(RED("nullptr "));
+            printf("token %2ld ", i);
         }
-        else
+        printf("\n");
+
+        for (size_t i = k * OUTPUT_WIDTH; i < tokens->length && i < k * OUTPUT_WIDTH + OUTPUT_WIDTH; i++)
         {
-            printf("%8s ", DecryptType(tokens->tokens[i]->type));
+            if (tokens->tokens[i] == NULL)
+            {
+                printf(RED("nullptr "));
+            }
+            else
+            {
+                printf("%8s ", DecryptType(tokens->tokens[i]->type));
+            }
         }
+        printf("\n");
+        for (size_t i = k * OUTPUT_WIDTH; i < tokens->length && i < k * OUTPUT_WIDTH + OUTPUT_WIDTH; i++)
+        {
+            if (tokens->tokens[i] == NULL)
+            {
+                continue;
+            }
+            switch(tokens->tokens[i]->type)
+            {
+                case OP:
+                    printf("%8s ", DecryptOperation(tokens->tokens[i]->data.op));
+                    break;
+                case NUM:
+                    printf("%8d ", tokens->tokens[i]->data.num);
+                    break;
+                case FLT:
+                    printf("%8lf ", tokens->tokens[i]->data.flt);
+                    break;
+                case VAR:
+                    printf("%8s ", tokens->tokens[i]->data.var);
+                    break;
+                case ERR_T:
+                default:
+                    printf(RED("null\t "));
+                    break;
+            }
+        }
+        printf("\n");
     }
-    printf("\n");
-    for (size_t i = 0; i < tokens->length; i++)
-    {
-        if (tokens->tokens[i] == NULL)
-        {
-            continue;
-        }
-        switch(tokens->tokens[i]->type)
-        {
-            case OP:
-                printf("%8s ", DecryptOperation(tokens->tokens[i]->data.op));
-                break;
-            case NUM:
-                printf("%8d ", tokens->tokens[i]->data.num);
-                break;
-            case FLT:
-                printf("%8lf ", tokens->tokens[i]->data.flt);
-                break;
-            case VAR:
-                printf("%8s ", tokens->tokens[i]->data.var);
-                break;
-            case ERR_T:
-            default:
-                printf(RED("null\t "));
-                break;
-        }
-    }
-    printf("\n");
 
 }
 
@@ -287,7 +292,8 @@ void DumpNode(Node_t* node)
     tm_info = localtime(&timer);
     strftime(buffer, 26, "%Y-%m-%d %H:%M:%S", tm_info);
     puts(buffer);
-    printf("time: %s, node: %p\n, node_type: %d, node_data: %s\n", buffer, node, node->type, node->data);
+    printf("time: %s, node: %p\n, node_type: %d, node_data: %s\n", buffer, node, node->type, node->data.var);
+
     return ;
 }
 

@@ -15,7 +15,7 @@ ErrorKeys CreateLog(Tree_t* tree, const char* file, const char* func, const int 
 
     size_t dump_number = tree->dump_num;
     FILE* log = tree->log;
-
+    printf(MAGENTA("log = %p\n"), log);
     if (log)
     {
         fprintf(log, "<FONT color = GREEN>TREE_DUMP : </FONT>\n");
