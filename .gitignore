@@ -1,4 +1,42 @@
-/obj
-/log
+,gitignore
+
+# --- Специфичные файлы проекта ---
+# Исполняемые файлы (бинарники)
+Tree.exe
+tree
 *.exe
+
+# Логи и дампы (занимают много места и постоянно меняются)
+log/
+*.log
+*.dmp
 *.htm
+*.html
+
+# Объектные файлы
+obj/
+*.o
+
+# --- Настройки редакторов и системные файлы ---
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+bin/
+obj/
+*.sln
+*.vcxproj
+*.user
+
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Временные файлы текстовых редакторов
+*.swp
+*~
